@@ -1,0 +1,9 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+
+  --foreground: rgb(8, 8, 8);
+  --background: rgb(250, 250, 250);
+
+  background-color: var(--background);
+}
