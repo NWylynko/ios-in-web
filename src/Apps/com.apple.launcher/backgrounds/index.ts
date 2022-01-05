@@ -6,7 +6,7 @@ interface Backgrounds {
   [name: string]: string;
 }
 
-export const defaultBackgrounds: Backgrounds = {
+export const backgrounds: Backgrounds = {
   dark,
   ios15
 }
