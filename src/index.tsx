@@ -7,9 +7,9 @@ import { LoadingPage } from "./Components/Loading";
 const App = React.lazy(() => import("./AppManager"))
 
 const Container = () => (
-  <Suspense fallback={<LoadingPage text="Loading IOS" />} >
-    <App />
-  </Suspense>
+    <Suspense fallback={<LoadingPage text="Loading IOS" />} >
+      <App />
+    </Suspense>
 )
 
 render(<Container />, document.getElementById("root"))

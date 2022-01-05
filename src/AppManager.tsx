@@ -3,6 +3,7 @@ import { LoadingPage } from "./Components/Loading";
 
 import { getApps } from "./Apps";
 import { App } from "./Types/App"
+import { AppContainer } from "./Components/AppContainer";
 
 interface AppMangerStore {
   id: string;
@@ -75,7 +76,9 @@ const AppManager = () => {
   return (
     <AppManagerContext.Provider value={value}>
       <Suspense fallback={<LoadingPage text={"Loading " + App.name} />} >
-        <App.Component />
+        <AppContainer>
+          <App.Component />
+        </AppContainer>
       </Suspense>
     </AppManagerContext.Provider>
   )
