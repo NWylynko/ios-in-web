@@ -23,12 +23,25 @@ export const Launcher = () => {
 
   const { userApps, setId } = useAppManager();
 
-  const dockApps = userApps.splice(0, 3)
+  const apps = userApps.slice(3)
+  const dockApps = userApps.slice(0, 3)
+
+  const [height, setHeight] = useState(window.innerHeight);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setHeight(window.innerHeight);
+    }
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize)
+  }, [])
   
   return (
-    <Container image={backgroundImage}>
+    <Container image={backgroundImage} height={`${height}px`}>
       <GridLayout>
-        {userApps.map(({ id, name, icon }) => (
+        {apps.map(({ id, name, icon }) => (
           <AppButton key={id} onClick={() => setId(id)}>
             {icon && <AppIcon image={icon} />}
             <span>{name}</span>
@@ -48,12 +61,13 @@ export const Launcher = () => {
 
 interface ContainerProps {
   image: string;
+  height: string;
 }
 
 const Container = styled.div`
   background-image: url(${({ image }: ContainerProps) => image});
   background-size: cover;
-  height: 100vh;
+  height: ${({ height }) => height};
 
   display: flex;
   flex-direction: column;
