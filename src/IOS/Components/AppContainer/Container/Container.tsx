@@ -17,5 +17,7 @@ export const Container = ({ children }: ContainerProps) => {
 const StyledContainer = styled.div`
   position: relative;
   width: var(--full-width);
-  height: var(--full-height);
+  height: calc(var(--full-height) - 35px);
+  background-color: var(--background);
+  padding-top: 35px;
 `;

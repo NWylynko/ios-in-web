@@ -21,6 +21,9 @@ const IphoneEdge = styled.div`
   position: relative;
   background-color: var(--foreground);
 
+  max-height: var(--full-height);
+  max-width: var(--full-width);
+
   &:after {
     content: "";
     width: 50%;
