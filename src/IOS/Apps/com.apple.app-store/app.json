@@ -1,0 +1,7 @@
+{
+  "id": "com.apple.app-store",
+  "name": "App Store",
+  "icon": "/icon.svg",
+  "type": "user",
+  "entrypoint": "/index"
+}

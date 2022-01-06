@@ -27,33 +27,36 @@ export const Launcher = () => {
   const dockApps = userApps.slice(0, 3)
 
   return (
-    <Container image={backgroundImage}>
-      <GridLayout>
-        {apps.map(({ id, name, icon }) => (
-          <AppButton key={id} onClick={() => setId(id)}>
-            {icon && <AppIcon image={icon} />}
-            <span>{name}</span>
-          </AppButton>
-        ))}
-      </GridLayout>
-      <Dock>
-        {dockApps.map(({ id, name, icon }) => (
-          <AppButton key={id} onClick={() => setId(id)}>
-            {icon && <AppIcon image={icon} />}
-          </AppButton>
-        ))}
-      </Dock>
-    </Container>
-  )
+    <>
+      <Image src={backgroundImage} />
+      <Container>
+        <GridLayout>
+          {apps.map(({ id, name, icon }) => (
+            <AppButton key={id} onClick={() => setId(id)}>
+              {icon && <AppIcon image={icon} />}
+              <span>{name}</span>
+            </AppButton>
+          ))}
+        </GridLayout>
+        <Dock>
+          {dockApps.map(({ id, name, icon }) => (
+            <AppButton key={id} onClick={() => setId(id)}>
+              {icon && <AppIcon image={icon} />}
+            </AppButton>
+          ))}
+        </Dock>
+      </Container>
+    </>)
 }
 
-interface ContainerProps {
-  image: string;
-}
+const Image = styled.img`
+  height: var(--full-height);
+  width: var(--full-width);
+  position: absolute;
+  inset: 0;
+`;
 
 const Container = styled.div`
-  background-image: url(${({ image }: ContainerProps) => image});
-  background-size: cover;
   height: 100%;
 
   display: flex;

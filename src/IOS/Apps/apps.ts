@@ -5,10 +5,11 @@ import path from "path-browserify"
 import { AppInfo } from "../Types/AppInfo";
 import { App } from '../Types/App';
 
-const appDirs: string[] = preval`
+const appInfos: AppInfo[] = preval`
 
   // import file system api
   const fs = require("fs");
+  const path = require("path");
 
   // read the dir for all the apps
   const appsDir = fs.readdirSync(__dirname)
@@ -16,17 +17,21 @@ const appDirs: string[] = preval`
   // filter out the typescript files (eg this one)
   const apps = appsDir.filter((appName) => appName.slice(-3) !== ".ts")
 
+  // read the app.json files
+  const appInfos = apps.map(app => {
+    console.log("found", app)
+    const filePath = path.join(__dirname, app, "app.json")
+    const fileString = fs.readFileSync(filePath, "utf-8")
+    return JSON.parse(fileString)
+  })
+
   // export it
-  module.exports = apps
+  module.exports = appInfos
 `;
 
 export const getApps = async (): Promise<App[]> => {
 
-  // loads the info.ts file from each app
-  const appInfos = await Promise.all(appDirs.map( async (dir: string) => {
-    const { info }: { info: AppInfo } = await import("./" + dir + "/info.ts")
-    return info
-  }))
+  console.time()
 
   // add the imports
   const apps = await Promise.all(appInfos.map(async (app) => {
@@ -36,6 +41,8 @@ export const getApps = async (): Promise<App[]> => {
       Component: React.lazy(() => import("./" + path.join(app.id, app.entrypoint))),
     }
   }))
+
+  console.timeEnd()
 
   return apps
 }

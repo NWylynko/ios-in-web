@@ -16,8 +16,8 @@ export const LoadingPage = ({ text }: LoadingPageProps) => {
 }
 
 const LoadingPageContainer = styled.div`
-  width: 100vw;
-  height: 80vh;
+  width: var(--full-width);
+  height: var(--full-height);
   display: flex;
   flex-direction: column;
   align-content: center;
