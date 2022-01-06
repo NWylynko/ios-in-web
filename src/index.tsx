@@ -1,14 +1,13 @@
 import React, { Suspense } from "react"
 import { render } from "react-dom"
+import { LoadingPage } from "./Components/Loading"
 import "./index.css"
 
-// import { LoadingPage } from "./Components/Loading";
-
-const IOS = React.lazy(() => import("./IOS"))
+const App = React.lazy(() => import("./app"))
 
 const Container = () => (
-    <Suspense fallback={<></>} >
-      <IOS />
+    <Suspense fallback={<LoadingPage text="Loading" />} >
+      <App />
     </Suspense>
 )
 

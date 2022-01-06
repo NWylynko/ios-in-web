@@ -1,9 +1,11 @@
 import React, { Suspense, useEffect, useState, createContext, useContext } from "react";
-import { LoadingPage } from "./Components/Loading";
+import { LoadingPage, BootingScreen } from "./Components/Loading";
 
-import { getApps } from "./Apps";
+import { getApps } from "./getApps";
 import { App } from "./Types/App"
 import { AppContainer } from "./Components/AppContainer";
+
+import { iosEvents } from "./events";
 
 interface AppMangerStore {
   id: string;
@@ -58,6 +60,15 @@ const AppManager = () => {
     setLoading(false)
   }, [id, apps])
 
+  useEffect(() => {
+    const openApp = (appId: string) => {
+      console.log("opening", appId)
+      setId(appId)
+    }
+    iosEvents.on("open-app", openApp)
+    return () => { iosEvents.off("open-app", openApp) }
+  }, [])
+
   const value: AppMangerStore = {
     id, setId,
     userApps, setUserApps,
@@ -66,7 +77,7 @@ const AppManager = () => {
   }
   
   if (loading) {
-    return <LoadingPage text="Loading Apps" />
+    return <BootingScreen />
   }
 
   if (!App) {

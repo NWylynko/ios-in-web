@@ -2,8 +2,8 @@ import preval from 'preval.macro'
 import React from 'react';
 import path from "path-browserify"
 
-import { AppInfo } from "../Types/AppInfo";
-import { App } from '../Types/App';
+import { AppInfo } from "./Types/AppInfo";
+import { App } from './Types/App';
 
 const appInfos: AppInfo[] = preval`
 
@@ -11,8 +11,11 @@ const appInfos: AppInfo[] = preval`
   const fs = require("fs");
   const path = require("path");
 
+  // Apps folder
+  const appsBaseDir = path.join(__dirname, "Apps")
+
   // read the dir for all the apps
-  const appsDir = fs.readdirSync(__dirname)
+  const appsDir = fs.readdirSync(appsBaseDir)
 
   // filter out the typescript files (eg this one)
   const apps = appsDir.filter((appName) => appName.slice(-3) !== ".ts")
@@ -20,7 +23,7 @@ const appInfos: AppInfo[] = preval`
   // read the app.json files
   const appInfos = apps.map(app => {
     console.log("found", app)
-    const filePath = path.join(__dirname, app, "app.json")
+    const filePath = path.join(appsBaseDir, app, "app.json")
     const fileString = fs.readFileSync(filePath, "utf-8")
     return JSON.parse(fileString)
   })
@@ -31,18 +34,19 @@ const appInfos: AppInfo[] = preval`
 
 export const getApps = async (): Promise<App[]> => {
 
-  console.time()
+  const timerName = "Settings up Imports for Apps"
+  console.time(timerName)
 
   // add the imports
   const apps = await Promise.all(appInfos.map(async (app) => {
     return {
       ...app,
-      icon: app.icon && (await import("./" + path.join(app.id, app.icon))).default,
-      Component: React.lazy(() => import("./" + path.join(app.id, app.entrypoint))),
+      icon: app.icon && (await import("./" + path.join("Apps/", app.id, app.icon))).default,
+      Component: React.lazy(() => import("./" + path.join("Apps/", app.id, app.entrypoint))),
     }
   }))
 
-  console.timeEnd()
+  console.timeEnd(timerName)
 
   return apps
 }
