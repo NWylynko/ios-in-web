@@ -37,16 +37,10 @@ const AppManager = () => {
 
   const [id, setId] = useState<AppIds>("com.apple.launcher")
   const [App, setApp] = useState<App | undefined>(undefined)
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setLoading(true)
-
-    console.log('launching', id)
     const app = apps.find((app) => app.id === id);
     setApp(app)
-
-    setLoading(false)
   }, [id])
 
   const openApp = (appId: AppIds) => {
@@ -64,10 +58,6 @@ const AppManager = () => {
     allApps: apps,
     userApps,
     openApp
-  }
-  
-  if (loading) {
-    return <BootingScreen />
   }
 
   if (!App) {
