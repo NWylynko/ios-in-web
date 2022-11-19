@@ -1,7 +1,5 @@
 {
   "id": "com.apple.contacts",
   "name": "Contacts",
-  "icon": "/icon.svg",
-  "type": "user",
-  "entrypoint": "/index"
+  "type": "user"
 }

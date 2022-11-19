@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { CgHomeScreen } from "react-icons/cg"
+import { CgHomeScreen } from "@react-icons/all-files/cg/CgHomeScreen"
 
 import { openApp } from "../../IOS";
 

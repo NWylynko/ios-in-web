@@ -1,7 +1,9 @@
 
 
-export const Contacts = () => {
+const Contacts = () => {
   return (
     <span>Contacts</span>
   )
 }
+
+export default Contacts
