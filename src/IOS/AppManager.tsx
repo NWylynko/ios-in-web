@@ -62,7 +62,6 @@ const AppManager = () => {
 
   useEffect(() => {
     const openApp = (appId: string) => {
-      console.log("opening", appId)
       setId(appId)
     }
     iosEvents.on("open-app", openApp)

@@ -1,52 +1,29 @@
-import preval from 'preval.macro'
-import React from 'react';
-import path from "path-browserify"
+import dirtyApps from "./Apps"
+import { z } from "zod"
 
-import { AppInfo } from "./Types/AppInfo";
-import { App } from './Types/App';
+const schemaItem = z.object({
+  info: z.object({
+    id: z.string(),
+    name: z.string(),
+    type: z.union([z.literal("user"), z.literal("system")])
+  }),
+  icon: z.any().optional(),
+  app: z.any()
+})
 
-const appInfos: AppInfo[] = preval`
+export const getApps = () => {
 
-  // import file system api
-  const fs = require("fs");
-  const path = require("path");
+  return Object.keys(dirtyApps).map((id) => {
 
-  // Apps folder
-  const appsBaseDir = path.join(__dirname, "Apps")
+    // @ts-ignore
+    const dirtyApp = dirtyApps[id]
 
-  // read the dir for all the apps
-  const appsDir = fs.readdirSync(appsBaseDir)
+    const app = schemaItem.parse(dirtyApp)
 
-  // filter out the typescript files (eg this one)
-  const apps = appsDir.filter((appName) => appName.slice(-3) !== ".ts")
-
-  // read the app.json files
-  const appInfos = apps.map(app => {
-    console.log("found", app)
-    const filePath = path.join(appsBaseDir, app, "app.json")
-    const fileString = fs.readFileSync(filePath, "utf-8")
-    return JSON.parse(fileString)
-  })
-
-  // export it
-  module.exports = appInfos
-`;
-
-export const getApps = async (): Promise<App[]> => {
-
-  const timerName = "Settings up Imports for Apps"
-  console.time(timerName)
-
-  // add the imports
-  const apps = await Promise.all(appInfos.map(async (app) => {
     return {
-      ...app,
-      icon: app.icon && (await import("./" + path.join("Apps/", app.id, app.icon))).default,
-      Component: React.lazy(() => import("./" + path.join("Apps/", app.id, app.entrypoint))),
+      ...app.info,
+      icon: app?.icon,
+      Component: app.app
     }
-  }))
-
-  console.timeEnd(timerName)
-
-  return apps
+  })
 }

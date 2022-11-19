@@ -18,7 +18,7 @@ const backgroundImage = backgrounds["ios15"]
 
 
 
-export const Launcher = () => {
+const Launcher = () => {
   loadImage(backgroundImage).read();
 
   const { userApps, setId } = useAppManager();
@@ -48,6 +48,8 @@ export const Launcher = () => {
       </Container>
     </>)
 }
+
+export default Launcher
 
 const Image = styled.img`
   height: var(--full-height);

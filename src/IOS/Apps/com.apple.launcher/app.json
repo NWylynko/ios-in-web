@@ -1,6 +1,5 @@
 {
   "id": "com.apple.launcher",
   "name": "Launcher",
-  "type": "system",
-  "entrypoint": "/index"
+  "type": "system"
 }

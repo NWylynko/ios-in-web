@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-import { AiFillApple } from "react-icons/ai"
+import { AiFillApple } from "@react-icons/all-files/ai/AiFillApple"
 
 export const BootingScreen = () => {
   return (
