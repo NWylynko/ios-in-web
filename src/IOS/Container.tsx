@@ -1,20 +1,20 @@
 import React, { Suspense } from "react"
 import styled from "styled-components";
 
-import { LoadingPage, BootingScreen } from "./Components/Loading";
+import { BootingScreen } from "./Components/Loading";
 
 const AppManager = React.lazy(() => import("./AppManager"))
 
 export const Container = () => (
-  <IphoneEdge>
+  <IPhoneEdge>
     <Suspense fallback={<BootingScreen />} >
       <AppManager />
     </Suspense>
-  </IphoneEdge>
+  </IPhoneEdge>
 
 )
 
-const IphoneEdge = styled.div`
+const IPhoneEdge = styled.div`
   border: 16px solid var(--foreground);
   border-radius: 45px;
   overflow: hidden;

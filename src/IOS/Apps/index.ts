@@ -1,5 +1,10 @@
 import comApple from "./com.apple";
 
-export default {
+const apps = {
   ...comApple
 } as const
+
+export default apps;
+
+export type Apps = typeof apps;
+export type AppIds = keyof Apps

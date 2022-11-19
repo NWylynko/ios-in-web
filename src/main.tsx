@@ -14,4 +14,6 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   </React.StrictMode>
 )
 
-inject();
+if (import.meta.env.PROD) {
+  inject()
+}
