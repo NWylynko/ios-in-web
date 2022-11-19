@@ -1,15 +1,20 @@
 import styled from "styled-components";
-import { Controls } from "./Components/Controls";
+
 import IOS from "./IOS";
+import { Controls } from "./Components/Controls";
+import { Description } from "./Components/Description"
 
 
 const App = () => {
   return (
-    <Container>
-      <div />
-      <IOS />
-      <Controls />
-    </Container>
+    <>
+      <Container>
+        <div />
+        <IOS />
+        <Controls />
+      </Container>
+      <Description />
+    </>
   )
 }
 
