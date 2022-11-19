@@ -1,4 +1,5 @@
 import React, { Suspense } from 'react'
+import { inject } from '@vercel/analytics';
 import ReactDOM from 'react-dom/client'
 import { LoadingPage } from "./Components/Loading"
 import './index.css'
@@ -12,3 +13,5 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     </Suspense>
   </React.StrictMode>
 )
+
+inject();

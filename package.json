@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@react-icons/all-files": "https://github.com/react-icons/react-icons/releases/download/v4.6.0/react-icons-all-files-4.6.0.tgz",
+    "@vercel/analytics": "^0.1.5",
     "events": "^3.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
