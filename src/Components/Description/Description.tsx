@@ -4,7 +4,7 @@ import styled from "styled-components";
 export const Description = () => {
   return (
     <Container>
-      <Text>Created for fun by <Link href="https://nick.wylynko.com">Nick Wylynko</Link>, I would love if you left me a star on the <Link href="https://github.com/nwylynko/ios-in-web">Repository</Link>.</Text>
+      <Text>Created for fun by <Link href="https://nick.wylynko.com">Nick Wylynko</Link>, please star it on <Link href="https://github.com/nwylynko/ios-in-web">Github</Link>.</Text>
     </Container>
   )
 }
@@ -15,7 +15,7 @@ const Container = styled.div`
 `;
 
 const Text = styled.span`
-  max-width: 315px;
+  max-width: 450px;
   margin: 16px;
   padding: 16px;
 
