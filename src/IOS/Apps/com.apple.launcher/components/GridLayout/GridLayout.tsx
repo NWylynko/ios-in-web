@@ -6,4 +6,6 @@ export const GridLayout = styled.div`
   
   padding: 16px;
 
+  /* I don't know why these needs to be here but it breaks otherwise */
+  backdrop-filter: blur(0px);
   `;

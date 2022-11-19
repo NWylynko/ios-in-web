@@ -15,8 +15,10 @@ const Launcher = () => {
 
   const { userApps, openApp } = useAppManager();
 
-  const apps = userApps.slice(3)
-  const dockApps = userApps.slice(0, 3)
+  const dockApps = userApps.slice(0, 4)
+  const apps = userApps.slice(4, 20) // need state and stuff to manage app layout
+
+  console.log(apps)
 
   return (
     <>
@@ -26,7 +28,7 @@ const Launcher = () => {
           {apps.map(({ id, name, icon }) => (
             <AppButton key={id} onClick={() => openApp(id)}>
               {icon && <AppIcon image={icon} />}
-              <span>{name}</span>
+              <AppLabel>{name}</AppLabel>
             </AppButton>
           ))}
         </GridLayout>
@@ -56,4 +58,8 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+`;
+
+const AppLabel = styled.span`
+  text-shadow: 2px 2px 12px black;
 `;
