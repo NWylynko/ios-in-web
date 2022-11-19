@@ -1,5 +1,5 @@
 
-import EventEmitter from "events"
+import { EventEmitter } from "events"
 
 export const iosEvents = new EventEmitter()
 
