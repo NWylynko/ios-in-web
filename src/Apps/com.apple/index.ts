@@ -34,14 +34,12 @@ import * as Weather from "../com.apple.weather"
 
 export default {
 
-  // dock
-// no phone add:(
+  "com.apple.launcher": Launcher,
+
   "com.apple.stocks": Stocks,
   "com.apple.safari": Safari,
   "com.apple.i-message": IMessage,
   "com.apple.apple-music": AppleMusic,
-
-  // first page
   "com.apple.facetime": Facetime,
   "com.apple.calendar": Calendar,
   "com.apple.photos": Photos,
@@ -54,15 +52,11 @@ export default {
   "com.apple.apple-tv": AppleTv,
   "com.apple.podcasts": Podcasts,
   "com.apple.app-store": AppStore,
-// maps app
   "com.apple.home": Home,
   "com.apple.wallet": Wallet,
   "com.apple.settings": Settings,
   "com.apple.my-shortcuts": MyShortcuts,
-
-
   "com.apple.contacts": Contacts,
-  "com.apple.launcher": Launcher,
   "com.apple.apple-store": AppleStore,
   "com.apple.books": Books,
   "com.apple.calculator": Calculator,

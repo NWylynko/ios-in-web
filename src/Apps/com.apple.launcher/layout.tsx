@@ -13,6 +13,11 @@ const initialPages: AppId[][] = [
     "com.apple.mail", "com.apple.notes", "com.apple.reminders", "com.apple.clock",
     "com.apple.news", "com.apple.apple-tv", "com.apple.podcasts", "com.apple.app-store",
     "com.apple.home", "com.apple.wallet", "com.apple.settings", "com.apple.my-shortcuts",
+  ],
+  [
+    "com.apple.contacts", "com.apple.apple-store", "com.apple.books", "com.apple.calculator",
+    "com.apple.clips", "com.apple.files", "com.apple.find-my", "com.apple.health", 
+    "com.apple.measure", "com.apple.translate", "com.apple.voice-memos", "com.apple.weather"
   ]
 ]
 
