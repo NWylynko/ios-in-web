@@ -1,14 +1,14 @@
 import { Suspense, useEffect } from "react";
 
 import { AppContainer } from "./Components/AppContainer";
-import { BootingScreen, LoadingPage } from "./Components/Loading";
+import { BootingScreen } from "./Components/Loading";
 
 import { apps } from "./apps";
 import { iosEvents } from "./events";
 import { useAppManager } from "./useAppManager";
 
 const AppManager = () => {
-  const { activeApp, openApp } = useAppManager()
+  const { activeApp, openApp } = useAppManager(({ activeApp, openApp }) => ({ activeApp, openApp }))
   const App = apps.find((app) => app.id === activeApp);
 
   useEffect(() => {
@@ -22,7 +22,7 @@ const AppManager = () => {
   }
 
   return (
-    <Suspense fallback={<Fallback appName={App.name} />} >
+    <Suspense fallback={<BootingScreen />} >
       <AppContainer>
         <App.Component />
       </AppContainer>
@@ -32,11 +32,3 @@ const AppManager = () => {
 }
 
 export default AppManager
-
-const Fallback = ({ appName }: { appName: string }) => {
-  if (appName === "Launcher") {
-    return <BootingScreen />
-  } else {
-    return <LoadingPage text={"Loading " + appName} />
-  }
-}

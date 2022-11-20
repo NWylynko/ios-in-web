@@ -1,5 +1,6 @@
 import dirtyApps, { AppId } from "../Apps"
 import { z } from "zod"
+import type { LoadableComponent } from "@loadable/component";
 export type { AppId } from "../Apps";
 
 const schemaItem = z.object({
@@ -26,6 +27,14 @@ export const apps = Object.keys(dirtyApps).map((id) => {
   } as App
 })
 
+export const findApp = (appId: AppId) => {
+  const app = apps.find((app) => app.id === appId)
+  if (!app) {
+    throw new Error(`Unable to find the app ${appId}`)
+  }
+  return app;
+}
+
 export const userApps = apps.filter(({ type }) => type === "user")
 
 
@@ -33,6 +42,6 @@ export interface App {
   id: AppId;
   name: string;
   icon?: string;
-  Component:  React.LazyExoticComponent<React.ComponentType<any>>;
+  Component: LoadableComponent<unknown>
   type: "system" | "user"
 }

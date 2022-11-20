@@ -24,10 +24,14 @@ const getApps = (apps: AppId[]) => {
 
 const Launcher = () => {
 
-  const openApp = useAppManager(state => state.openApp);
-  const { dock, pages } = useAppLayout(({ dock, pages }) => ({ dock, pages}))
+  const { openApp, installing } = useAppManager(({ openApp, installing }) => ({ openApp, installing }));
+  const { dock, pages } = useAppLayout(({ dock, pages }) => ({ dock, pages }))
 
   const dockApps = getApps(dock)
+
+  const isInstalling = (appId: AppId) => {
+    return installing.includes(appId)
+  }
 
   return (
     <>
@@ -39,8 +43,8 @@ const Launcher = () => {
             return (
               <GridLayout key={i}>
                 {apps.map(({ id, name, icon }) => (
-                  <AppButton key={id} onClick={() => openApp(id)}>
-                    {icon && <AppIcon image={icon} />}
+                  <AppButton key={id} onClick={() => openApp(id)} disabled={isInstalling(id)}>
+                    {icon && <AppIcon image={icon} loading={isInstalling(id)} />}
                     <AppLabel>{name}</AppLabel>
                   </AppButton>
                 ))}
@@ -49,9 +53,9 @@ const Launcher = () => {
           })}
         </Pages>
         <Dock>
-          {dockApps.map(({ id, name, icon }) => (
-            <AppButton key={id} onClick={() => openApp(id)}>
-              {icon && <AppIcon image={icon} />}
+          {dockApps.map(({ id, icon }) => (
+            <AppButton key={id} onClick={() => openApp(id)} disabled={isInstalling(id)}>
+              {icon && <AppIcon image={icon} loading={isInstalling(id)} />}
             </AppButton>
           ))}
         </Dock>
