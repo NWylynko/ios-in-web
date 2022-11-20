@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { apps, type App } from "../../../IOS"
+import { apps, useAppManager, type App } from "../../../IOS"
 import { useInstallApp } from "../installApp"
 
 const installableApps = apps.filter((app) => !app["built-in"])
@@ -27,13 +27,22 @@ const List = styled.div`
 
 const AppItem = (props: App) => {
 
-  const installApp = useInstallApp()
+  const { installApp, installing, installed } = useInstallApp(props.id)
+  const openApp = useAppManager(state => state.openApp)
+
+  const handleClick = () => {
+    if (installed) {
+      openApp(props.id)
+    } else {
+      installApp()
+    }
+  }
 
   return (
     <Item key={props.id}>
       <Image src={props.icon} height="64px" width="64px" />
       <h3>{props.name}</h3>
-      <InstallButton onClick={() => installApp(props.id)}>Get</InstallButton>
+      <InstallButton onClick={handleClick} disabled={installing}>{installed ? "Open" : installing ? "Installing" : "Get"}</InstallButton>
     </Item>
   )
 }
@@ -60,4 +69,8 @@ const InstallButton = styled.button`
   color: #2246e6;
   font-weight: bold;
   font-size: 14px;
+
+  &:disabled {
+    color: grey;
+  }
 `;

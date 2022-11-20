@@ -25,6 +25,7 @@ type AppLayoutStore = {
   dock: AppId[]
   pages: AppId[][]
   addApp: (appId: AppId) => void;
+  isAppInstalled: (appId: AppId) => boolean;
 }
 
 export const useAppLayout = createStore<AppLayoutStore>()(
@@ -49,6 +50,18 @@ export const useAppLayout = createStore<AppLayoutStore>()(
             return;
           }
         }
+      },
+      isAppInstalled: (appId: AppId) => {
+        const { pages } = get()
+        let installed = false;
+        for (const page of pages) {
+          for (const app of page) {
+            if (app === appId) {
+              installed = true
+            }
+          }
+        }
+        return installed;
       }
     }),
     {
