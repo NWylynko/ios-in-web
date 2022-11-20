@@ -1,12 +1,12 @@
 import styled from "styled-components"
-import { loadImage } from "../../Suspense/loadImage"
+import { loadImage } from "../../IOS/Suspense/loadImage"
 import { backgrounds } from "./backgrounds"
 
 import { AppButton } from "./components/AppButton"
 import { AppIcon } from "./components/AppIcon"
 import { Dock } from "./components/Dock"
 import { GridLayout } from "./components/GridLayout"
-import { useAppManager } from "../../AppManager"
+import { useAppManager } from "../../IOS/AppManager"
 
 const backgroundImage = backgrounds["ios15"]
 

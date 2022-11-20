@@ -1,6 +1,6 @@
-import dirtyApps from "./Apps"
+import dirtyApps from "../Apps"
 import { z } from "zod"
-export type { AppIds } from "./Apps";
+export type { AppId } from "../Apps";
 
 const schemaItem = z.object({
   info: z.object({

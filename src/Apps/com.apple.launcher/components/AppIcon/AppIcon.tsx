@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { loadImage } from "../../../../Suspense/loadImage";
+import { loadImage } from "../../../../IOS/Suspense/loadImage";
 
 interface AppIconProps {
   image: string;

@@ -7,4 +7,4 @@ const apps = {
 export default apps;
 
 export type Apps = typeof apps;
-export type AppIds = keyof Apps
+export type AppId = keyof Apps

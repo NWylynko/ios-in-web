@@ -1,13 +1,13 @@
 import React, { Suspense, useEffect, useState, createContext, useContext } from "react";
 import { LoadingPage, BootingScreen } from "./Components/Loading";
 
-import { getApps, type AppIds } from "./getApps";
+import { getApps, type AppId } from "./getApps";
 import { AppContainer } from "./Components/AppContainer";
 
 import { iosEvents } from "./events";
 
 export interface App {
-  id: AppIds;
+  id: AppId;
   name: string;
   icon?: string;
   Component:  React.LazyExoticComponent<React.ComponentType<any>>;
@@ -15,10 +15,10 @@ export interface App {
 }
 
 interface AppMangerStore {
-  activeApp: AppIds;
+  activeApp: AppId;
   allApps: App[];
   userApps: App[];
-  openApp: (appId: AppIds) => void;
+  openApp: (appId: AppId) => void;
 }
 
 const AppManagerContext = createContext<AppMangerStore>({
@@ -35,7 +35,7 @@ const userApps = apps.filter(({ type }) => type === "user")
 
 const AppManager = () => {
 
-  const [id, setId] = useState<AppIds>("com.apple.launcher")
+  const [id, setId] = useState<AppId>("com.apple.launcher")
   const [App, setApp] = useState<App | undefined>(undefined)
 
   useEffect(() => {
@@ -43,7 +43,7 @@ const AppManager = () => {
     setApp(app)
   }, [id])
 
-  const openApp = (appId: AppIds) => {
+  const openApp = (appId: AppId) => {
     setId(appId)
   }
 
