@@ -1,19 +1,21 @@
 import styled from "styled-components"
-import { loadImage } from "../../IOS/Suspense/loadImage"
-import { backgrounds } from "./backgrounds"
+
+import { loadImage } from "../../Suspense/loadImage"
+import { useAppManager, userApps } from "../../IOS"
 
 import { AppButton } from "./components/AppButton"
 import { AppIcon } from "./components/AppIcon"
 import { Dock } from "./components/Dock"
 import { GridLayout } from "./components/GridLayout"
-import { useAppManager } from "../../IOS/AppManager"
+
+import { backgrounds } from "./backgrounds"
 
 const backgroundImage = backgrounds["ios15"]
 
 const Launcher = () => {
   loadImage(backgroundImage).read();
 
-  const { userApps, openApp } = useAppManager();
+  const openApp = useAppManager(state => state.openApp);
 
   const dockApps = userApps.slice(0, 4)
   const apps = userApps.slice(4, 20) // need state and stuff to manage app layout

@@ -11,7 +11,6 @@ export const Container = () => (
       <AppManager />
     </Suspense>
   </IPhoneEdge>
-
 )
 
 const IPhoneEdge = styled.div`
