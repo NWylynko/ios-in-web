@@ -29,21 +29,28 @@ const Launcher = () => {
 
   const dockApps = getApps(dock)
 
-  const page = 0 // the first page
-  const apps = getApps(pages[page])
+  // const page = 0 // the first page
+  // const apps = getApps(pages[page])
 
   return (
     <>
       <Background />
       <Container>
-        <GridLayout>
-          {apps.map(({ id, name, icon }) => (
-            <AppButton key={id} onClick={() => openApp(id)}>
-              {icon && <AppIcon image={icon} />}
-              <AppLabel>{name}</AppLabel>
-            </AppButton>
-          ))}
-        </GridLayout>
+        <Pages>
+          {pages.map((page) => {
+            const apps = getApps(page)
+            return (
+              <GridLayout>
+                {apps.map(({ id, name, icon }) => (
+                  <AppButton key={id} onClick={() => openApp(id)}>
+                    {icon && <AppIcon image={icon} />}
+                    <AppLabel>{name}</AppLabel>
+                  </AppButton>
+                ))}
+              </GridLayout>
+            )
+          })}
+        </Pages>
         <Dock>
           {dockApps.map(({ id, name, icon }) => (
             <AppButton key={id} onClick={() => openApp(id)}>
@@ -57,19 +64,20 @@ const Launcher = () => {
 
 export default Launcher
 
-const Image = styled.img`
-  height: var(--full-height);
-  width: var(--full-width);
-  position: absolute;
-  inset: 0;
-`;
-
 const Container = styled.div`
   height: 100%;
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+`;
+
+const Pages = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow: scroll;
+  min-width: calc(var(--full-width) + 16px);
 `;
 
 const AppLabel = styled.span`
