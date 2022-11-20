@@ -24,6 +24,7 @@ const initialPages: AppId[][] = [
 type AppLayoutStore = {
   dock: AppId[]
   pages: AppId[][]
+  addApp: (appId: AppId) => void;
 }
 
 export const useAppLayout = createStore<AppLayoutStore>()(
@@ -31,6 +32,24 @@ export const useAppLayout = createStore<AppLayoutStore>()(
     (set, get) => ({
       dock: initialDock,
       pages: initialPages,
+      addApp: (appId: AppId) => {
+        const { pages } = get()
+        for (const indexString in pages) {
+
+          const index = Number(indexString)
+          const page = pages[index]
+          const numberOfApps = page.length
+
+          if (numberOfApps < 4 * 6) {
+
+            const newPage = [...page, appId]
+            pages.splice(index, 1, newPage)
+
+            set({ pages })
+            return;
+          }
+        }
+      }
     }),
     {
       name: `app-layout`,
