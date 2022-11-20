@@ -1,1 +1,5 @@
-{"id":"com.apple.news","name":"News","type":"user"}
+{
+  "id": "com.apple.news",
+  "name": "News",
+  "built-in": true
+}

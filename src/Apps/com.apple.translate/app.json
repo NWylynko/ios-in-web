@@ -1,1 +1,5 @@
-{"id":"com.apple.translate","name":"Translate","type":"user"}
+{
+  "id": "com.apple.translate",
+  "name": "Translate",
+  "built-in": true
+}

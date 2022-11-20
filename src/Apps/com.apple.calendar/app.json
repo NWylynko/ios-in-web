@@ -1,1 +1,5 @@
-{"id":"com.apple.calendar","name":"Calendar","type":"user"}
+{
+  "id": "com.apple.calendar",
+  "name": "Calendar",
+  "built-in": true
+}

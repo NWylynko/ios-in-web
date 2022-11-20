@@ -1,1 +1,5 @@
-{"id":"com.apple.weather","name":"Weather","type":"user"}
+{
+  "id": "com.apple.weather",
+  "name": "Weather",
+  "built-in": true
+}

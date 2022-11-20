@@ -1,1 +1,5 @@
-{"id":"com.apple.camera","name":"Camera","type":"user"}
+{
+  "id": "com.apple.camera",
+  "name": "Camera",
+  "built-in": true
+}

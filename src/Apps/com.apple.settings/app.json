@@ -1,1 +1,5 @@
-{"id":"com.apple.settings","name":"Settings","type":"user"}
+{
+  "id": "com.apple.settings",
+  "name": "Settings",
+  "built-in": true
+}

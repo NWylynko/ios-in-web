@@ -1,1 +1,5 @@
-{"id":"com.apple.safari","name":"Safari","type":"user"}
+{
+  "id": "com.apple.safari",
+  "name": "Safari",
+  "built-in": true
+}

@@ -1,1 +1,5 @@
-{"id":"com.apple.facetime","name":"Facetime","type":"user"}
+{
+  "id": "com.apple.facetime",
+  "name": "Facetime",
+  "built-in": true
+}

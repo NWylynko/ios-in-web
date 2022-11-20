@@ -1,1 +1,5 @@
-{"id":"com.apple.reminders","name":"Reminders","type":"user"}
+{
+  "id": "com.apple.reminders",
+  "name": "Reminders",
+  "built-in": true
+}

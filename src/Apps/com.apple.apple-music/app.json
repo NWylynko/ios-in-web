@@ -1,1 +1,5 @@
-{"id":"com.apple.apple-music","name":"Apple Music","type":"user"}
+{
+  "id": "com.apple.apple-music",
+  "name": "Apple Music",
+  "built-in": true
+}

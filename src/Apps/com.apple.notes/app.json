@@ -1,1 +1,5 @@
-{"id":"com.apple.notes","name":"Notes","type":"user"}
+{
+  "id": "com.apple.notes",
+  "name": "Notes",
+  "built-in": true
+}

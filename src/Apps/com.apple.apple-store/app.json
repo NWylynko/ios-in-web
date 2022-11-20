@@ -1,1 +1,5 @@
-{"id":"com.apple.apple-store","name":"Apple Store","type":"user"}
+{
+  "id": "com.apple.apple-store",
+  "name": "Apple Store",
+  "built-in": false
+}

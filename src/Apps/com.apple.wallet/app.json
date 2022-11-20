@@ -1,1 +1,5 @@
-{"id":"com.apple.wallet","name":"Wallet","type":"user"}
+{
+  "id": "com.apple.wallet",
+  "name": "Wallet",
+  "built-in": true
+}

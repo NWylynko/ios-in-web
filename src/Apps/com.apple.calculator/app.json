@@ -1,1 +1,5 @@
-{"id":"com.apple.calculator","name":"Calculator","type":"user"}
+{
+  "id": "com.apple.calculator",
+  "name": "Calculator",
+  "built-in": true
+}

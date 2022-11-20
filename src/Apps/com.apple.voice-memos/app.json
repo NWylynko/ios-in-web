@@ -1,1 +1,5 @@
-{"id":"com.apple.voice-memos","name":"Voice Memos","type":"user"}
+{
+  "id": "com.apple.voice-memos",
+  "name": "Voice Memos",
+  "built-in": true
+}

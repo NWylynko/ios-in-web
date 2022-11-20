@@ -7,7 +7,7 @@ const schemaItem = z.object({
   info: z.object({
     id: z.string(),
     name: z.string(),
-    type: z.union([z.literal("user"), z.literal("system")])
+    "built-in": z.boolean().optional()
   }),
   icon: z.any().optional(),
   app: z.any()
@@ -35,13 +35,10 @@ export const findApp = (appId: AppId) => {
   return app;
 }
 
-export const userApps = apps.filter(({ type }) => type === "user")
-
-
 export interface App {
   id: AppId;
   name: string;
   icon?: string;
   Component: LoadableComponent<unknown>
-  type: "system" | "user"
+  "built-in": boolean,
 }

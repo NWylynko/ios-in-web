@@ -1,1 +1,5 @@
-{"id":"com.apple.health","name":"Health","type":"user"}
+{
+  "id": "com.apple.health",
+  "name": "Health",
+  "built-in": true
+}

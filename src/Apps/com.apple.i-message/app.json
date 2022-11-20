@@ -1,1 +1,5 @@
-{"id":"com.apple.i-message","name":"iMessage","type":"user"}
+{
+  "id": "com.apple.i-message",
+  "name": "iMessage",
+  "built-in": true
+}

@@ -1,5 +1,5 @@
 {
   "id": "com.apple.contacts",
   "name": "Contacts",
-  "type": "user"
+  "built-in": true
 }

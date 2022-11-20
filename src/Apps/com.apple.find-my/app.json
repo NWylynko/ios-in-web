@@ -1,1 +1,5 @@
-{"id":"com.apple.find-my","name":"Find My","type":"user"}
+{
+  "id": "com.apple.find-my",
+  "name": "Find My",
+  "built-in": true
+}

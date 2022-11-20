@@ -1,1 +1,5 @@
-{"id":"com.apple.home","name":"Home","type":"user"}
+{
+  "id": "com.apple.home",
+  "name": "Home",
+  "built-in": true
+}

@@ -1,1 +1,5 @@
-{"id":"com.apple.my-shortcuts","name":"My Shortcuts","type":"user"}
+{
+  "id": "com.apple.my-shortcuts",
+  "name": "My Shortcuts",
+  "built-in": true
+}

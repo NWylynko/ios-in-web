@@ -1,1 +1,5 @@
-{"id":"com.apple.apple-tv","name":"Apple Tv","type":"user"}
+{
+  "id": "com.apple.apple-tv",
+  "name": "Apple Tv",
+  "built-in": true
+}

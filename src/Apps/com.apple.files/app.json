@@ -1,1 +1,5 @@
-{"id":"com.apple.files","name":"Files","type":"user"}
+{
+  "id": "com.apple.files",
+  "name": "Files",
+  "built-in": true
+}

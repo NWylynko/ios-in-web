@@ -1,5 +1,5 @@
 {
   "id": "com.apple.app-store",
   "name": "App Store",
-  "type": "user"
+  "built-in": true
 }

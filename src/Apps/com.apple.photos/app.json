@@ -1,1 +1,5 @@
-{"id":"com.apple.photos","name":"Photos","type":"user"}
+{
+  "id": "com.apple.photos",
+  "name": "Photos",
+  "built-in": true
+}

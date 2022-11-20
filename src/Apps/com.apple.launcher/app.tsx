@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-import { useAppManager, userApps } from "../../IOS"
+import { useAppManager, apps } from "../../IOS"
 
 import { AppButton } from "./components/AppButton"
 import { AppIcon } from "./components/AppIcon"
@@ -12,9 +12,9 @@ import { useAppLayout } from "./layout"
 import { AppId } from ".."
 
 
-const getApps = (apps: AppId[]) => {
-  return apps.map((id) => {
-    const app = userApps.find((app) => app.id === id)
+const getApps = (appsWanted: AppId[]) => {
+  return appsWanted.map((id) => {
+    const app = apps.find((app) => app.id === id)
     if (!app) {
       throw new Error(`app ${id} not found :/`)
     }

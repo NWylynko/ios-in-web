@@ -1,1 +1,5 @@
-{"id":"com.apple.clock","name":"Clock","type":"user"}
+{
+  "id": "com.apple.clock",
+  "name": "Clock",
+  "built-in": true
+}

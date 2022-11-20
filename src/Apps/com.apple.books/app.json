@@ -1,1 +1,5 @@
-{"id":"com.apple.books","name":"Books","type":"user"}
+{
+  "id": "com.apple.books",
+  "name": "Books",
+  "built-in": true
+}

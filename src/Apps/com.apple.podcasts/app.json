@@ -1,1 +1,5 @@
-{"id":"com.apple.podcasts","name":"Podcasts","type":"user"}
+{
+  "id": "com.apple.podcasts",
+  "name": "Podcasts",
+  "built-in": true
+}

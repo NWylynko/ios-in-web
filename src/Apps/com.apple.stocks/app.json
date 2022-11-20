@@ -1,1 +1,5 @@
-{"id":"com.apple.stocks","name":"Stocks","type":"user"}
+{
+  "id": "com.apple.stocks",
+  "name": "Stocks",
+  "built-in": true
+}
