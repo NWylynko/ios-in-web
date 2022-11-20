@@ -1,30 +1,40 @@
 import styled from "styled-components"
 
-import { loadImage } from "../../Suspense/loadImage"
 import { useAppManager, userApps } from "../../IOS"
 
 import { AppButton } from "./components/AppButton"
 import { AppIcon } from "./components/AppIcon"
 import { Dock } from "./components/Dock"
 import { GridLayout } from "./components/GridLayout"
+import { Background } from "./components/Background"
 
-import { backgrounds } from "./backgrounds"
+import { useAppLayout } from "./layout"
+import { AppId } from ".."
 
-const backgroundImage = backgrounds["ios15"]
+
+const getApps = (apps: AppId[]) => {
+  return apps.map((id) => {
+    const app = userApps.find((app) => app.id === id)
+    if (!app) {
+      throw new Error(`app ${id} not found :/`)
+    }
+    return app
+  })
+}
 
 const Launcher = () => {
-  loadImage(backgroundImage).read();
 
   const openApp = useAppManager(state => state.openApp);
+  const { dock, pages } = useAppLayout(({ dock, pages }) => ({ dock, pages}))
 
-  const dockApps = userApps.slice(0, 4)
-  const apps = userApps.slice(4, 20) // need state and stuff to manage app layout
+  const dockApps = getApps(dock)
 
-  console.log(apps)
+  const page = 0 // the first page
+  const apps = getApps(pages[page])
 
   return (
     <>
-      <Image src={backgroundImage} />
+      <Background />
       <Container>
         <GridLayout>
           {apps.map(({ id, name, icon }) => (
