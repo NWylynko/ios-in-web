@@ -34,10 +34,10 @@ const Launcher = () => {
       <Background />
       <Container>
         <Pages>
-          {pages.map((page) => {
+          {pages.map((page, i) => {
             const apps = getApps(page)
             return (
-              <GridLayout>
+              <GridLayout key={i}>
                 {apps.map(({ id, name, icon }) => (
                   <AppButton key={id} onClick={() => openApp(id)}>
                     {icon && <AppIcon image={icon} />}
