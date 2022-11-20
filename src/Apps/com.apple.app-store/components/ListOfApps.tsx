@@ -42,7 +42,7 @@ const AppItem = (props: App) => {
     <Item key={props.id}>
       <Image src={props.icon} height="64px" width="64px" />
       <h3>{props.name}</h3>
-      <InstallButton onClick={handleClick} disabled={installing}>{installed ? "Open" : installing ? "Installing" : "Get"}</InstallButton>
+      <InstallButton onClick={handleClick} disabled={installing}>{installing ? "Installing" : installed ? "Open" : "Get"}</InstallButton>
     </Item>
   )
 }
