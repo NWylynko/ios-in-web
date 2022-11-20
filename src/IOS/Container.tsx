@@ -22,6 +22,7 @@ const IPhoneEdge = styled.div`
 
   max-height: var(--full-height);
   max-width: var(--full-width);
+  min-width: var(--full-width);
 
   &:after {
     content: "";
