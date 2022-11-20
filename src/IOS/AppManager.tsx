@@ -66,7 +66,7 @@ const AppManager = () => {
 
   return (
     <AppManagerContext.Provider value={value}>
-      <Suspense fallback={<LoadingPage text={"Loading " + App.name} />} >
+      <Suspense fallback={<Fallback appName={App.name} />} >
         <AppContainer>
           <App.Component />
         </AppContainer>
@@ -76,3 +76,11 @@ const AppManager = () => {
 }
 
 export default AppManager
+
+const Fallback = ({ appName }: { appName: string }) => {
+  if (appName === "Launcher") {
+    return <BootingScreen />
+  } else {
+    return <LoadingPage text={"Loading " + appName} />
+  }
+}
