@@ -29,9 +29,6 @@ const Launcher = () => {
 
   const dockApps = getApps(dock)
 
-  // const page = 0 // the first page
-  // const apps = getApps(pages[page])
-
   return (
     <>
       <Background />
