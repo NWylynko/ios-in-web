@@ -1,4 +1,4 @@
-import { ComingSoon } from "../../modules/ComingSoon"
+import { ComingSoon } from "module/ComingSoon"
 import Icon from "./icon.svg"
 
 

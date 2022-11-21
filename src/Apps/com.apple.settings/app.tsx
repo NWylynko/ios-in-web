@@ -1,6 +1,6 @@
 import styled from "styled-components"
-import { Router, Route } from "../../modules/Router"
-import { Statusbar } from "../../modules/StatusBar"
+import { Router, Route } from "module/Router"
+import { Statusbar } from "module/StatusBar"
 
 import { HomeScreen } from "./screens/home"
 

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import { CgHomeScreen } from "@react-icons/all-files/cg/CgHomeScreen"
 
-import { openApp } from "../../../IOS/SystemEvents";
+import { openApp } from "ios/SystemEvents";
 
 export const Controls = () => {
   return (

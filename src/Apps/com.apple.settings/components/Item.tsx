@@ -1,6 +1,6 @@
 import { IoIosArrowForward } from "@react-icons/all-files/io/IoIosArrowForward";
 import styled from "styled-components";
-import { useRouter } from "../../../modules/Router";
+import { useRouter } from "module/Router";
 
 type ItemProps = LinkItemProps | ChildItemProps
 

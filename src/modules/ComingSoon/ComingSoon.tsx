@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { openApp } from "../../IOS/SystemEvents";
-import { loadImage } from "../Suspense/loadImage";
+import { openApp } from "ios/SystemEvents";
+import { loadImage } from "module/Suspense/loadImage";
 
 type ComingSoonProps = {
   name: string;

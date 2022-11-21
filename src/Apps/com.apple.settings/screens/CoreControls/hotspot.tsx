@@ -1,5 +1,5 @@
 import React from "react"
-import { useRouter } from "../../../../modules/Router"
+import { useRouter } from "module/Router"
 
 export const HotspotScreen = () => {
   const { goBack, canGoBack } = useRouter()

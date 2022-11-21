@@ -14,7 +14,14 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "paths": {
+      "ios": ["./src/IOS"],
+      "ios/*": ["./src/IOS/*"],
+      "module": ["./src/modules"],
+      "module/*": ["./src/modules/*"],
+      "@/*": ["./src/*"]
+    }
   },
   "include": [
     "src", 
