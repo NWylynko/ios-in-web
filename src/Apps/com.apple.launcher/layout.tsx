@@ -12,7 +12,7 @@ const initialPages: AppId[][] = [
     "com.apple.facetime", "com.apple.calendar", "com.apple.photos", "com.apple.camera",
     "com.apple.mail", "com.apple.notes", "com.apple.reminders", "com.apple.clock",
     "com.apple.news", "com.apple.apple-tv", "com.apple.podcasts", "com.apple.app-store",
-    "com.apple.home", "com.apple.wallet", "com.apple.settings", "com.apple.my-shortcuts",
+    "com.apple.home", "com.apple.wallet", "com.apple.settings", "com.apple.shortcuts",
   ],
   [
     "com.apple.contacts", "com.apple.books", "com.apple.calculator", "com.apple.files", 
@@ -66,6 +66,7 @@ export const useAppLayout = createStore<AppLayoutStore>()(
     }),
     {
       name: `app-layout`,
+      version: 2
     }
   )
 )

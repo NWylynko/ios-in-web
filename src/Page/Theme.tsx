@@ -106,7 +106,8 @@ export const useTheme = createStore<ThemeStore>()(
       setTheme: (theme) => set({ theme })
     }),
     {
-      name: "theme"
+      name: "theme",
+      version: 1
     }
   )
 )
