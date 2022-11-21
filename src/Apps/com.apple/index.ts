@@ -1,6 +1,5 @@
 import * as AppStore from "../com.apple.app-store"
 import * as Contacts from "../com.apple.contacts"
-import * as Launcher from "../com.apple.launcher"
 import * as AppleMusic from "../com.apple.apple-music"
 import * as AppleStore from "../com.apple.apple-store"
 import * as AppleTv from "../com.apple.apple-tv"
@@ -33,9 +32,6 @@ import * as Wallet from "../com.apple.wallet"
 import * as Weather from "../com.apple.weather"
 
 export default {
-
-  "com.apple.launcher": Launcher,
-
   "com.apple.stocks": Stocks,
   "com.apple.safari": Safari,
   "com.apple.i-message": IMessage,

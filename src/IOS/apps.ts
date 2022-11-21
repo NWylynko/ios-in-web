@@ -29,6 +29,7 @@ export const apps = Object.keys(dirtyApps).map((id) => {
 
 export const findApp = (appId: AppId) => {
   const app = apps.find((app) => app.id === appId)
+  console.log({ appId, app })
   if (!app) {
     throw new Error(`Unable to find the app ${appId}`)
   }

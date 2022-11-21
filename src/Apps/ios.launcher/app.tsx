@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-import { useAppManager, apps } from "../../IOS"
+import { useAppManager, apps, findApp } from "../../IOS"
 
 import { AppButton } from "./components/AppButton"
 import { AppIcon } from "./components/AppIcon"
@@ -14,13 +14,7 @@ import { Statusbar } from "../../modules/StatusBar"
 
 
 const getApps = (appsWanted: AppId[]) => {
-  return appsWanted.map((id) => {
-    const app = apps.find((app) => app.id === id)
-    if (!app) {
-      throw new Error(`app ${id} not found :/`)
-    }
-    return app
-  })
+  return appsWanted.map(findApp)
 }
 
 const Launcher = () => {

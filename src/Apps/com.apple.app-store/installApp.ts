@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { AppId } from ".."
 import { findApp, useAppManager } from "../../IOS"
-import { useAppLayout } from "../com.apple.launcher/layout"
+import { useAppLayout } from "../ios.launcher/layout"
 
 export const useInstallApp = (appId: AppId) => {
   const { addApp, isAppInstalled } = useAppLayout(({ addApp, isAppInstalled }) => ({ addApp, isAppInstalled }))

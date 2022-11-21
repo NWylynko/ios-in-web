@@ -9,7 +9,7 @@ interface AppMangerStore {
 }
 
 export const useAppManager = createStore<AppMangerStore>()((set, get) => ({
-  activeApp: "com.apple.launcher",
+  activeApp: "ios.launcher",
   installing: [],
   loadApp: async (appId) => {
     const app = findApp(appId)

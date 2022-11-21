@@ -13,7 +13,7 @@ export const ComingSoon = ({ name, icon }: ComingSoonProps) => {
     <Container>
       <Image src={icon} />
       <Text>Sorry but <strong>{name}</strong> has not been built yet. Don't worry we are working hard and it should be done soon.</Text>
-      <Button onClick={() => openApp("com.apple.launcher")}>Go Home</Button>
+      <Button onClick={() => openApp("ios.launcher")}>Go Home</Button>
     </Container>
   )
 }

@@ -1,6 +1,8 @@
 import comApple from "./com.apple";
+import * as Launcher from "./ios.launcher"
 
 const apps = {
+  "ios.launcher": Launcher,
   ...comApple
 } as const
 

@@ -7,7 +7,7 @@ import { openApp } from "../../../IOS";
 export const Controls = () => {
   return (
     <Container>
-      <CgHomeScreen size={48} onClick={() => openApp("com.apple.launcher")} />
+      <CgHomeScreen size={48} onClick={() => openApp("ios.launcher")} />
     </Container>
   )
 }
