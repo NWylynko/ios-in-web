@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-import { loadImage } from "../../../../Suspense/loadImage";
+import { loadImage } from "../../../../modules/Suspense/loadImage";
 
 import { AiOutlineLoading } from "@react-icons/all-files/ai/AiOutlineLoading"
 

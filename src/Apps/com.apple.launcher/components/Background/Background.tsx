@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-import { loadImage } from "../../../../Suspense/loadImage"
+import { loadImage } from "../../../../modules/Suspense/loadImage"
 
 import { backgrounds } from "./images"
 

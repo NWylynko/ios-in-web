@@ -19,7 +19,7 @@
   "include": [
     "src", 
     "src/vite-env.d.ts",
-    "src/styled.d.ts",
+    "src/Page/styled.d.ts",
     "src/main.tsx"
   ],
   "references": [{ "path": "./tsconfig.node.json" }]

@@ -1,5 +1,5 @@
 import React from "react"
-import { useRouter } from "../../../../Router"
+import { useRouter } from "../../../../modules/Router"
 
 export const WifiScreen = () => {
   const { goBack, canGoBack } = useRouter()

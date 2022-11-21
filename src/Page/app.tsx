@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import IOS from "./IOS";
+import IOS from "../IOS";
 import { Controls } from "./Components/Controls";
 import { Description } from "./Components/Description"
 

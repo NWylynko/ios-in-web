@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { Router, Route } from "../../Router"
+import { Router, Route } from "../../modules/Router"
 
 import { HomeScreen } from "./screens/home"
 
