@@ -13,8 +13,10 @@ yarn install
 
 Run the development server
 ```bash
-yarn dev
+yarn develop
 ```
+
+Open up http://localhost:3000
 
 ## Important folders for development
 
