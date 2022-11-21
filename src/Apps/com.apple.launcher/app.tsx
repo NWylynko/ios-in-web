@@ -10,6 +10,7 @@ import { Background } from "./components/Background"
 
 import { useAppLayout } from "./layout"
 import { AppId } from ".."
+import { Statusbar } from "../../modules/StatusBar"
 
 
 const getApps = (appsWanted: AppId[]) => {
@@ -36,6 +37,7 @@ const Launcher = () => {
   return (
     <>
       <Background />
+      <Statusbar color="transparent" />
       <Container>
         <Pages>
           {pages.map((page, i) => {
