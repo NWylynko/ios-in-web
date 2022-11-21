@@ -19,6 +19,6 @@ const Settings = () => {
 export default Settings
 
 const Container = styled.div`
-  margin: 12px;
-  background-color: #dfdfdf;
+  padding: 12px;
+  background-color: ${({ theme }) => theme.ios.color.gray5};
 `;

@@ -63,7 +63,7 @@ const InstallButton = styled.button`
   padding: 8px 24px;
   border: none;
   border-radius: 16px;
-  color: #2246e6;
+  color: ${({ theme }) => theme.ios.color.blue};
   font-weight: bold;
   font-size: 14px;
 
