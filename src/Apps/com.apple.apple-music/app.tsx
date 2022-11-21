@@ -1,8 +1,10 @@
+import { ComingSoon } from "../../modules/ComingSoon"
+import Icon from "./icon.svg"
 
 
 const AppleMusic = () => {
   return (
-    <span>Apple Music</span>
+    <ComingSoon name="Apple Music" icon={Icon} />
   )
 }
 

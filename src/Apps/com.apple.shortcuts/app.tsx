@@ -2,10 +2,10 @@ import { ComingSoon } from "../../modules/ComingSoon"
 import Icon from "./icon.svg"
 
 
-const Calendar = () => {
+const Shortcuts = () => {
   return (
-    <ComingSoon name="Calendar" icon={Icon} />
+    <ComingSoon name="Shortcuts" icon={Icon} />
   )
 }
 
-export default Calendar
+export default Shortcuts

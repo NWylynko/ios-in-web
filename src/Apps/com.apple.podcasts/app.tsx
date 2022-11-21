@@ -1,8 +1,10 @@
+import { ComingSoon } from "../../modules/ComingSoon"
+import Icon from "./icon.svg"
 
 
 const Podcasts = () => {
   return (
-    <span>Podcasts</span>
+    <ComingSoon name="Podcasts" icon={Icon} />
   )
 }
 

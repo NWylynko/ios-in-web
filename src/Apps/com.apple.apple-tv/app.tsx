@@ -1,9 +1,11 @@
+import { ComingSoon } from "../../modules/ComingSoon"
+import Icon from "./icon.svg"
 
 
-const AppleTv = () => {
+const AppleTV = () => {
   return (
-    <span>Apple Tv</span>
+    <ComingSoon name="Apple TV" icon={Icon} />
   )
 }
 
-export default AppleTv
+export default AppleTV

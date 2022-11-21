@@ -18,7 +18,7 @@ import * as Home from "../com.apple.home"
 import * as IMessage from "../com.apple.i-message"
 import * as Mail from "../com.apple.mail"
 import * as Measure from "../com.apple.measure"
-import * as MyShortcuts from "../com.apple.my-shortcuts"
+import * as Shortcuts from "../com.apple.shortcuts"
 import * as News from "../com.apple.news"
 import * as Notes from "../com.apple.notes"
 import * as Photos from "../com.apple.photos"
@@ -55,7 +55,7 @@ export default {
   "com.apple.home": Home,
   "com.apple.wallet": Wallet,
   "com.apple.settings": Settings,
-  "com.apple.my-shortcuts": MyShortcuts,
+  "com.apple.shortcuts": Shortcuts,
   "com.apple.contacts": Contacts,
   "com.apple.apple-store": AppleStore,
   "com.apple.books": Books,
