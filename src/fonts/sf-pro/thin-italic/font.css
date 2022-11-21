@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'SFProDisplay-ThinItalic';
+  src: url('SFProDisplay-ThinItalic.eot');
+  src: url('SFProDisplay-ThinItalic.eot?#iefix') format('embedded-opentype'),
+       url('SFProDisplay-ThinItalic.svg#SFProDisplay-ThinItalic') format('svg'),
+       url('SFProDisplay-ThinItalic.ttf') format('truetype'),
+       url('SFProDisplay-ThinItalic.woff') format('woff'),
+       url('SFProDisplay-ThinItalic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+

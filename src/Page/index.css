@@ -1,6 +1,5 @@
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
 
   --full-height: 812px;
   --full-width: 375px;
@@ -9,4 +8,8 @@ body {
   --background: rgb(250, 250, 250);
 
   background-color: var(--background);
+}
+
+* {
+  font-family: "SFProDisplay-Regular", 'Roboto', sans-serif;
 }

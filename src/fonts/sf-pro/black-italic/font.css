@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'SFProDisplay-BlackItalic';
+  src: url('SFProDisplay-BlackItalic.eot');
+  src: url('SFProDisplay-BlackItalic.eot?#iefix') format('embedded-opentype'),
+       url('SFProDisplay-BlackItalic.svg#SFProDisplay-BlackItalic') format('svg'),
+       url('SFProDisplay-BlackItalic.ttf') format('truetype'),
+       url('SFProDisplay-BlackItalic.woff') format('woff'),
+       url('SFProDisplay-BlackItalic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+

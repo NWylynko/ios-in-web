@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'SFProDisplay-HeavyItalic';
+  src: url('SFProDisplay-HeavyItalic.eot');
+  src: url('SFProDisplay-HeavyItalic.eot?#iefix') format('embedded-opentype'),
+       url('SFProDisplay-HeavyItalic.svg#SFProDisplay-HeavyItalic') format('svg'),
+       url('SFProDisplay-HeavyItalic.ttf') format('truetype'),
+       url('SFProDisplay-HeavyItalic.woff') format('woff'),
+       url('SFProDisplay-HeavyItalic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+

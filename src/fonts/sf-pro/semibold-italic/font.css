@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'SFProDisplay-SemiboldItalic';
+  src: url('SFProDisplay-SemiboldItalic.eot');
+  src: url('SFProDisplay-SemiboldItalic.eot?#iefix') format('embedded-opentype'),
+       url('SFProDisplay-SemiboldItalic.svg#SFProDisplay-SemiboldItalic') format('svg'),
+       url('SFProDisplay-SemiboldItalic.ttf') format('truetype'),
+       url('SFProDisplay-SemiboldItalic.woff') format('woff'),
+       url('SFProDisplay-SemiboldItalic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+

@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'SFProDisplay-UltralightItalic';
+  src: url('SFProDisplay-UltralightItalic.eot');
+  src: url('SFProDisplay-UltralightItalic.eot?#iefix') format('embedded-opentype'),
+       url('SFProDisplay-UltralightItalic.svg#SFProDisplay-UltralightItalic') format('svg'),
+       url('SFProDisplay-UltralightItalic.ttf') format('truetype'),
+       url('SFProDisplay-UltralightItalic.woff') format('woff'),
+       url('SFProDisplay-UltralightItalic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
