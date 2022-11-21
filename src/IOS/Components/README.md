@@ -1,0 +1,1 @@
+These are components native to ios, they aren't used by apps.

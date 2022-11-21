@@ -1,0 +1,3 @@
+## Permissions
+
+What will really bring this project together will be hooking in to the browsers apis to make apps like the camera, maps, etc work. So we will need a way to manage the permissions to the api. This will work in two layers, first the apps can request permissions to apis, (first using a permissions array in the app.json, and then programmatically calling something like 'askPermission'). Then this permissions manager will go and see if we the webpage have permissions to do that, if we don't then ask the browser for permission.

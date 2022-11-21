@@ -1,7 +1,7 @@
-import dirtyApps, { AppId } from "../Apps"
+import dirtyApps, { AppId } from "../../Apps"
 import { z } from "zod"
 import type { LoadableComponent } from "@loadable/component";
-export type { AppId } from "../Apps";
+export type { AppId } from "../../Apps";
 
 const schemaItem = z.object({
   info: z.object({

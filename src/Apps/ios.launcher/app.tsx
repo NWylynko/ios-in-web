@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-import { useAppManager, apps, findApp } from "../../IOS"
+import { useAppManager, findApp } from "../../IOS/AppManager"
 
 import { AppButton } from "./components/AppButton"
 import { AppIcon } from "./components/AppIcon"

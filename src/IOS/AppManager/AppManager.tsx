@@ -1,13 +1,13 @@
 import { Suspense, useEffect } from "react";
 
-import { AppContainer } from "./Components/AppContainer";
-import { BootingScreen } from "./Components/Loading";
+import { AppContainer } from "../Components/AppContainer";
+import { BootingScreen } from "../Components/Loading";
 
 import { apps } from "./apps";
-import { iosEvents } from "./events";
+import { iosEvents } from "../SystemEvents/events";
 import { useAppManager } from "./useAppManager";
 
-const AppManager = () => {
+export const AppManager = () => {
   const { activeApp, openApp } = useAppManager(({ activeApp, openApp }) => ({ activeApp, openApp }))
   const App = apps.find((app) => app.id === activeApp);
 
@@ -30,5 +30,3 @@ const AppManager = () => {
   )
 
 }
-
-export default AppManager

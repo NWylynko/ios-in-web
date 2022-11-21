@@ -1,0 +1,3 @@
+## Notifications
+
+The notifications manager, this will work by each app potentially exposing an async function, something like 'notifications', 'notificationHook', 'notificationHandler' that gets added to a array by this. Then on an interval, this goes through the loop slowly (don't wanna spam apis or overload the client), and runs the async functions. They can do anything they want but are intended to fetch from an endpoint to find if there is any notifications waiting for the user.

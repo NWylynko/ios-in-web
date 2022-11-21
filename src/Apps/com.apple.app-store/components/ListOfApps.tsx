@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { apps, useAppManager, type App } from "../../../IOS"
+import { apps, useAppManager, type App } from "../../../IOS/AppManager"
 import { useInstallApp } from "../installApp"
 
 const installableApps = apps.filter((app) => !app["built-in"])

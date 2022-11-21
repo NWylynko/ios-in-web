@@ -1,6 +1,6 @@
 
 import { EventEmitter } from "events"
-import { AppId } from "../Apps"
+import { AppId } from "../../Apps"
 
 export const iosEvents = new EventEmitter()
 

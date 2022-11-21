@@ -24,7 +24,7 @@ yarn dev
     - This includes the launcher, that gets started on boot
   - IOS
     - This has everything for the running of the os
-    - Eg, App Manager, Files management, Notifications, etc
+    - Eg, App Manager, Files management, Notifications, Permissions, etc
   - modules
     - Think of these as npm modules that are specific to this project. They are accessed and used directly by the apps.
     - Need to be built in a reusable and isolated way

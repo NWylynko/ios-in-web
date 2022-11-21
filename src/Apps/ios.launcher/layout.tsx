@@ -1,7 +1,7 @@
 import createStore from "zustand"
 import { persist } from 'zustand/middleware'
 
-import { type AppId } from "../../IOS/apps";
+import { type AppId } from "../../IOS/AppManager/apps";
 
 const initialDock: AppId[]= [
   "com.apple.stocks", "com.apple.safari", "com.apple.i-message", "com.apple.apple-music"
