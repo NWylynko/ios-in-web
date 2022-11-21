@@ -15,7 +15,7 @@ export const Container = () => (
 
 const IPhoneEdge = styled.div`
   border: 16px solid var(--foreground);
-  border-radius: 45px;
+  border-radius: 64px;
   overflow: hidden;
   position: relative;
   background-color: var(--foreground);

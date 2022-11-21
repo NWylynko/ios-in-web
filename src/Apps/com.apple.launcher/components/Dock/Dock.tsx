@@ -11,7 +11,7 @@ export const Dock = styled.div`
   background-color: #00000037;
   backdrop-filter: blur(16px);
 
-  margin: 12px;
+  margin: 16px;
   padding: 16px;
-  border-radius: 28px;
+  border-radius: 32px;
 `;
