@@ -18,7 +18,7 @@ const Text = styled.span`
   max-width: 450px;
   margin: 16px;
   padding: 16px;
-
+  font-family: "SFProDisplay-Bold", 'Roboto', sans-serif;
   color: grey;
 
   > a {
@@ -35,5 +35,5 @@ const Text = styled.span`
 `;
 
 const Link = styled.a`
-
+  font-family: "SFProDisplay-Bold", 'Roboto', sans-serif;
 `;
