@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { Router, Route } from "../../modules/Router"
+import { Statusbar } from "../../modules/StatusBar"
 
 import { HomeScreen } from "./screens/home"
 
@@ -7,12 +8,15 @@ import { WifiScreen } from "./screens/CoreControls/Wifi"
 
 const Settings = () => {
   return (
-    <Container>
-      <Router initialPath="/">
-        <Route path="/" screen={HomeScreen} />
-        <Route path="/wifi" screen={WifiScreen} />
-      </Router>
-    </Container>
+    <>
+      <Statusbar color="var(--iosColorGray5)" />
+      <Container>
+        <Router initialPath="/">
+          <Route path="/" screen={HomeScreen} />
+          <Route path="/wifi" screen={WifiScreen} />
+        </Router>
+      </Container>
+    </>
   )
 }
 

@@ -12,21 +12,24 @@ type StatusBarProps = {
 
 export const Statusbar = ({ color }: StatusBarProps) => {
   return (
-    <Container>
+    <Container bgColor={color}>
       <Partitions>
-        <span>{format(new Date(), "h:mm")}</span>
+        <Time>{format(new Date(), "h:mm")}</Time>
       </Partitions>
       <Partitions>
         {/* if possible by hooking in to the browsers apis it would be sick to animate these */}
-        <BsReception4 size={18} />
+        <BsReception4 size={16} />
         <IoIosWifi size={18} />
-        <BsBatteryFull size={18} /> 
+        <BsBatteryFull size={20} /> 
       </Partitions>
     </Container>
   )
 }
 
-const Container = styled.div`
+const Container = styled.div<{ bgColor: string }>`
+
+  background-color: ${(props) => props.bgColor};
+
   min-height: 35px;
   height: 35px;
   max-height: 35px;
@@ -50,4 +53,8 @@ const Partitions = styled.div`
   width: 110px;
   justify-content: center;
   align-items: center;
+`;
+
+const Time = styled.span`
+  font-weight: 600;
 `;
