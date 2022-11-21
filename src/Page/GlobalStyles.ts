@@ -2,6 +2,10 @@ import { createGlobalStyle } from "styled-components"
 
 const GlobalStyles = createGlobalStyle`
   body {
+
+    --colorWhite: ${props => props.theme.color.white};
+    --colorBlack: ${props => props.theme.color.black};
+
     --iosColorRed: ${props => props.theme.ios.color.red};
     --iosColorOrange: ${props => props.theme.ios.color.orange};
     --iosColorYellow: ${props => props.theme.ios.color.yellow};

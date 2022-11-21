@@ -10,6 +10,10 @@ const baseTheme: Partial<DefaultTheme> = {
 
 const lightTheme: DefaultTheme = {
   ...baseTheme,
+  color: {
+    white: `rgb(250, 250, 250)`,
+    black: `rgb(5, 5, 5)`,
+  },
   ios: {
     color: {
       red: `rgb(255, 59, 48)`,
@@ -37,6 +41,10 @@ const lightTheme: DefaultTheme = {
 
 const darkTheme: DefaultTheme = {
   ...baseTheme,
+  color: {
+    white: `rgb(5, 5, 5)`,
+    black: `rgb(250, 250, 250)`,
+  },
   ios: {
     color: {
       red: `rgb(255, 69, 58)`,

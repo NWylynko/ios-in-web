@@ -25,6 +25,10 @@ interface SystemColors {
 
 declare module 'styled-components' {
   export interface DefaultTheme {
+    color: {
+      white: string;
+      black: string;
+    }
     ios: {
       color: SystemColors
     }
