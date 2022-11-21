@@ -6,9 +6,6 @@ import { useInstallApp } from "../installApp"
 const installableApps = apps.filter((app) => !app["built-in"])
 
 export const ListOfApps = () => {
-
-  console.log({ installableApps })
-
   return (
     <List>
       {installableApps.map(app => (
