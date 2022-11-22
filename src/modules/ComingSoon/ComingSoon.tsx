@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { openApp } from "ios/SystemEvents";
 import { loadImage } from "module/Suspense/loadImage";
+import { useAppManager } from "ios/AppManager";
 
 type ComingSoonProps = {
   name: string;
@@ -9,6 +9,7 @@ type ComingSoonProps = {
 
 export const ComingSoon = ({ name, icon }: ComingSoonProps) => {
   loadImage(icon).read();
+  const openApp = useAppManager((state) => state.openApp);
   return (
     <Container>
       <Image src={icon} />

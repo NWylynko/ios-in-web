@@ -2,9 +2,10 @@ import styled from "styled-components";
 
 import { CgHomeScreen } from "@react-icons/all-files/cg/CgHomeScreen";
 
-import { openApp } from "ios/SystemEvents";
+import { useAppManager } from "ios/AppManager";
 
 export const Controls = () => {
+  const openApp = useAppManager((state) => state.openApp);
   return (
     <Container>
       <CgHomeScreen size={48} onClick={() => openApp("ios.launcher")} color="var(--colorBlack)" />
