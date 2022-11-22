@@ -41,13 +41,13 @@ export const SearchField = (props: SearchFieldProps) => {
           }
         }}
       />
-      <InvisibleButton>
-        <ListenIcon size={18} color="var(--iosColorGray2)" rightOffset={canBeCleared ? 32 : 0} />
-      </InvisibleButton>
+      <ListenIconContainer rightOffset={canBeCleared ? 32 : 0}>
+        <HiMicrophone size={18} color="var(--iosColorGray2)" />
+      </ListenIconContainer>
       {canBeCleared && (
-        <InvisibleButton onClick={clear}>
-          <ResetIcon size={18} color="var(--iosColorGray2)" />
-        </InvisibleButton>
+        <ResetIconContainer onClick={clear}>
+          <IoCloseCircle size={18} color="var(--iosColorGray2)" />
+        </ResetIconContainer>
       )}
     </Container>
   );
@@ -83,14 +83,14 @@ const SearchIcon = styled(BiSearch)`
   left: 12px;
 `;
 
-const ListenIcon = styled(HiMicrophone)<{ rightOffset: number }>`
+const ListenIconContainer = styled(InvisibleButton)<{ rightOffset: number }>`
   position: absolute;
-  top: 13px;
-  right: ${({ rightOffset }) => `${6 + rightOffset}px`};
+  top: 12px;
+  right: ${({ rightOffset }) => `${0 + rightOffset}px`};
 `;
 
-const ResetIcon = styled(IoCloseCircle)`
+const ResetIconContainer = styled(InvisibleButton)`
   position: absolute;
-  top: 13px;
-  right: 6px;
+  top: 12px;
+  right: 0px;
 `;
