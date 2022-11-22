@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { loadImage } from "module/Suspense/loadImage";
 import { useAppManager } from "ios/AppManager";
+import { Statusbar } from "module/StatusBar";
 
 type ComingSoonProps = {
   name: string;
@@ -11,14 +12,17 @@ export const ComingSoon = ({ name, icon }: ComingSoonProps) => {
   loadImage(icon).read();
   const openApp = useAppManager((state) => state.openApp);
   return (
-    <Container>
-      <Image src={icon} />
-      <Text>
-        Sorry but <strong>{name}</strong> has not been built yet. Don't worry we are working hard and it should be done
-        soon.
-      </Text>
-      <Button onClick={() => openApp("ios.launcher")}>Go Home</Button>
-    </Container>
+    <>
+      <Statusbar />
+      <Container>
+        <Image src={icon} />
+        <Text>
+          Sorry but <strong>{name}</strong> has not been built yet. Don't worry we are working hard and it should be
+          done soon.
+        </Text>
+        <Button onClick={() => openApp("ios.launcher")}>Go Home</Button>
+      </Container>
+    </>
   );
 };
 

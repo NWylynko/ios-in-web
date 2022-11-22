@@ -7,20 +7,22 @@ import { IoIosWifi } from "@react-icons/all-files/io/IoIosWifi";
 import { BsBatteryFull } from "@react-icons/all-files/bs/BsBatteryFull";
 
 type StatusBarProps = {
-  color: string;
+  color?: string;
+  invert?: boolean;
 };
 
-export const Statusbar = ({ color }: StatusBarProps) => {
+export const Statusbar = ({ color = "transparent", invert = false }: StatusBarProps) => {
+  const textColor = invert ? "var(--colorWhite)" : "var(--colorBlack)";
   return (
     <Container bgColor={color}>
       <Partitions>
-        <Time>{format(new Date(), "h:mm")}</Time>
+        <Time style={{ color: textColor }}>{format(new Date(), "h:mm")}</Time>
       </Partitions>
       <Partitions>
         {/* if possible by hooking in to the browsers apis it would be sick to animate these */}
-        <BsReception4 size={16} color="var(--colorWhite)" />
-        <IoIosWifi size={18} color="var(--colorWhite)" />
-        <BsBatteryFull size={20} color="var(--colorWhite)" />
+        <BsReception4 size={16} color={textColor} />
+        <IoIosWifi size={18} color={textColor} />
+        <BsBatteryFull size={20} color={textColor} />
       </Partitions>
     </Container>
   );
@@ -57,5 +59,4 @@ const Partitions = styled.div`
 
 const Time = styled.span`
   font-weight: 600;
-  color: ${({ theme }) => theme.color.white};
 `;

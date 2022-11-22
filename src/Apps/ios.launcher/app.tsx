@@ -29,7 +29,7 @@ const Launcher = () => {
   return (
     <>
       <Background />
-      <Statusbar color="transparent" />
+      <Statusbar invert={true} color="transparent" />
       <Container>
         <Pages>
           {pages.map((page, i) => {

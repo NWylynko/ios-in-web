@@ -1,12 +1,16 @@
+import { Statusbar } from "module/StatusBar";
 import styled from "styled-components";
 import { ListOfApps } from "./components/ListOfApps";
 
 const AppStore = () => {
   return (
-    <Page>
-      <Title>Apps</Title>
-      <ListOfApps />
-    </Page>
+    <>
+      <Statusbar />
+      <Page>
+        <Title>Apps</Title>
+        <ListOfApps />
+      </Page>
+    </>
   );
 };
 
