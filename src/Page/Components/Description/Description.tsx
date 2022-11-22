@@ -17,7 +17,7 @@ const Container = styled.div`
 `;
 
 const Text = styled.span`
-  max-width: 450px;
+  max-width: 480px;
   margin: 16px;
   padding: 16px;
   font-family: "SFProDisplay-Bold", 'Roboto', sans-serif;
