@@ -8,7 +8,8 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "pull-env": "vercel env pull .env.development.local"
+    "pull-env": "vercel env pull .env.development.local",
+    "format": "rome format ."
   },
   "dependencies": {
     "@loadable/component": "^5.15.2",
@@ -37,6 +38,7 @@
     "@types/styled-components": "^5.1.26",
     "@vercel/node": "^2.6.3",
     "@vitejs/plugin-react": "^2.2.0",
+    "rome": "^10.0.1",
     "typescript": "^4.6.4",
     "vercel": "^28.5.5",
     "vite": "^3.2.3",
