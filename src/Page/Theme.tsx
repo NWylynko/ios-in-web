@@ -85,8 +85,6 @@ type ThemeProps = {
 const Theme = ({ children }: ThemeProps) => {
   const theme = useTheme((state) => state.theme);
 
-  console.log(theme);
-
   return <ThemeProvider theme={themes[theme]}>{children}</ThemeProvider>;
 };
 
