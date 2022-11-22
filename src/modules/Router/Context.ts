@@ -10,7 +10,7 @@ export type RouterStore = {
 };
 
 const InvalidFunction = () => {
-  throw new Error(`try to call a function from useRouter outside of the <Router> component`);
+  throw new Error("try to call a function from useRouter outside of the <Router> component");
 };
 
 export const RouterContext = createContext<RouterStore>({

@@ -81,7 +81,7 @@ export const useAppLayout = createStore<AppLayoutStore>()(
       },
     }),
     {
-      name: `app-layout`,
+      name: "app-layout",
       version: 2,
     },
   ),

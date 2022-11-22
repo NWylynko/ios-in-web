@@ -12,7 +12,7 @@ export function loadImage(source: string): Resource<string> {
   // here we start getting the resource from the cache
   let resource = cache.get(source);
   // and if it's there we return it immediately
-  if (resource) return resource;
+  if (resource) { return resource; }
   // but if it's not we create a new resource
   resource = createResource<string>(
     () =>
