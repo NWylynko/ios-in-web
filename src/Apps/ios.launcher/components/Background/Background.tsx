@@ -1,22 +1,21 @@
-import React from "react"
-import styled from "styled-components"
+import React from "react";
+import styled from "styled-components";
 
-import { loadImage } from "module/Suspense/loadImage"
+import { loadImage } from "module/Suspense/loadImage";
 
-import { backgrounds } from "./images"
+import { backgrounds } from "./images";
 
-const backgroundImage = backgrounds["ios15"]
+const backgroundImage = backgrounds["ios15"];
 
 export const Background = () => {
-
   loadImage(backgroundImage).read();
 
   return (
     <>
       <Image src={backgroundImage} />
     </>
-  )
-}
+  );
+};
 
 const Image = styled.img`
   height: var(--full-height);

@@ -1,6 +1,5 @@
-import styled from "styled-components"
-import { ListOfApps } from "./components/ListOfApps"
-
+import styled from "styled-components";
+import { ListOfApps } from "./components/ListOfApps";
 
 const AppStore = () => {
   return (
@@ -8,10 +7,10 @@ const AppStore = () => {
       <Title>Apps</Title>
       <ListOfApps />
     </Page>
-  )
-}
+  );
+};
 
-export default AppStore
+export default AppStore;
 
 const Page = styled.div`
   display: flex;

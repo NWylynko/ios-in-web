@@ -1,7 +1,7 @@
 import styled, { keyframes } from "styled-components";
 import { loadImage } from "module/Suspense/loadImage";
 
-import { AiOutlineLoading } from "@react-icons/all-files/ai/AiOutlineLoading"
+import { AiOutlineLoading } from "@react-icons/all-files/ai/AiOutlineLoading";
 
 interface AppIconProps {
   image: string;
@@ -13,14 +13,14 @@ export const AppIcon = ({ image, loading }: AppIconProps) => {
   return (
     <AppIconContainer>
       <Icon src={image} />
-      {loading && 
+      {loading && (
         <LoadingContainer>
           <LoadingIndicator size={28} color="white" />
         </LoadingContainer>
-      }
+      )}
     </AppIconContainer>
-  )
-}
+  );
+};
 
 const AppIconContainer = styled.div`
   width: 64px;

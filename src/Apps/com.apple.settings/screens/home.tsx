@@ -1,16 +1,16 @@
-import React, { useState } from "react"
-import { Item } from "../components/Item"
-import { List } from "../components/List"
+import React, { useState } from "react";
+import { Item } from "../components/Item";
+import { List } from "../components/List";
 
-import { Areoplane } from "../icons/Aeroplane"
-import { Wifi } from "../icons/wifi"
-import { BlueTooth } from "../icons/bluetooth"
-import { Mobile } from "../icons/mobile"
-import { HotSpot } from "../icons/hotspot"
-import { Toggle } from "../components/Toggle"
+import { Areoplane } from "../icons/Aeroplane";
+import { Wifi } from "../icons/wifi";
+import { BlueTooth } from "../icons/bluetooth";
+import { Mobile } from "../icons/mobile";
+import { HotSpot } from "../icons/hotspot";
+import { Toggle } from "../components/Toggle";
 
 export const HomeScreen = () => {
-  const [value, setValue] = useState(false)
+  const [value, setValue] = useState(false);
   return (
     <main>
       <h1>Settings</h1>
@@ -24,5 +24,5 @@ export const HomeScreen = () => {
         <Item icon={HotSpot} title="Personal Hotspot" status="" link={"/hotspot"} />
       </List>
     </main>
-  )
-}
+  );
+};

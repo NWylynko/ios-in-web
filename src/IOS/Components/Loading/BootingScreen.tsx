@@ -1,6 +1,6 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
-import { AiFillApple } from "@react-icons/all-files/ai/AiFillApple"
+import { AiFillApple } from "@react-icons/all-files/ai/AiFillApple";
 
 export const BootingScreen = () => {
   return (
@@ -8,8 +8,8 @@ export const BootingScreen = () => {
       <AiFillApple size={64 * 1.5} />
       {/* <LoadingBar /> */}
     </BootingScreenContainer>
-  )
-}
+  );
+};
 
 const BootingScreenContainer = styled.div`
   width: var(--full-width);

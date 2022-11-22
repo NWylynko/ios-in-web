@@ -1,32 +1,30 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
-import { useAppManager, findApp } from "ios/AppManager"
+import { useAppManager, findApp } from "ios/AppManager";
 
-import { AppButton } from "./components/AppButton"
-import { AppIcon } from "./components/AppIcon"
-import { Dock } from "./components/Dock"
-import { GridLayout } from "./components/GridLayout"
-import { Background } from "./components/Background"
+import { AppButton } from "./components/AppButton";
+import { AppIcon } from "./components/AppIcon";
+import { Dock } from "./components/Dock";
+import { GridLayout } from "./components/GridLayout";
+import { Background } from "./components/Background";
 
-import { useAppLayout } from "./layout"
-import { AppId } from ".."
-import { Statusbar } from "module/StatusBar"
-
+import { useAppLayout } from "./layout";
+import { AppId } from "..";
+import { Statusbar } from "module/StatusBar";
 
 const getApps = (appsWanted: AppId[]) => {
-  return appsWanted.map(findApp)
-}
+  return appsWanted.map(findApp);
+};
 
 const Launcher = () => {
-
   const { openApp, installing } = useAppManager(({ openApp, installing }) => ({ openApp, installing }));
-  const { dock, pages } = useAppLayout(({ dock, pages }) => ({ dock, pages }))
+  const { dock, pages } = useAppLayout(({ dock, pages }) => ({ dock, pages }));
 
-  const dockApps = getApps(dock)
+  const dockApps = getApps(dock);
 
   const isInstalling = (appId: AppId) => {
-    return installing.includes(appId)
-  }
+    return installing.includes(appId);
+  };
 
   return (
     <>
@@ -35,7 +33,7 @@ const Launcher = () => {
       <Container>
         <Pages>
           {pages.map((page, i) => {
-            const apps = getApps(page)
+            const apps = getApps(page);
             return (
               <GridLayout key={i}>
                 {apps.map(({ id, name, icon }) => (
@@ -45,7 +43,7 @@ const Launcher = () => {
                   </AppButton>
                 ))}
               </GridLayout>
-            )
+            );
           })}
         </Pages>
         <Dock>
@@ -56,10 +54,11 @@ const Launcher = () => {
           ))}
         </Dock>
       </Container>
-    </>)
-}
+    </>
+  );
+};
 
-export default Launcher
+export default Launcher;
 
 const Container = styled.div`
   height: 100%;

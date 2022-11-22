@@ -1,1 +1,1 @@
-export { ComingSoon } from "./ComingSoon"
+export { ComingSoon } from "./ComingSoon";

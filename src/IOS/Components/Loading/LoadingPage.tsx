@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 import { Loading } from "./Loading";
 
@@ -12,8 +12,8 @@ export const LoadingPage = ({ text }: LoadingPageProps) => {
       <Loading />
       <span>{text}</span>
     </LoadingPageContainer>
-  )
-}
+  );
+};
 
 const LoadingPageContainer = styled.div`
   width: var(--full-width);

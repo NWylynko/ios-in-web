@@ -1,3 +1,3 @@
-import { main } from "./Page/main"
+import { main } from "./Page/main";
 
-main()
+main();

@@ -1,11 +1,8 @@
-import { ComingSoon } from "module/ComingSoon"
-import Icon from "./icon.svg"
-
+import { ComingSoon } from "module/ComingSoon";
+import Icon from "./icon.svg";
 
 const Stocks = () => {
-  return (
-    <ComingSoon name="Stocks" icon={Icon} />
-  )
-}
+  return <ComingSoon name="Stocks" icon={Icon} />;
+};
 
-export default Stocks
+export default Stocks;

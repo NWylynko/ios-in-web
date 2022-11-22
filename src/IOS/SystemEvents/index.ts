@@ -1,1 +1,1 @@
-export { iosEvents, openApp } from "./events"
+export { iosEvents, openApp } from "./events";

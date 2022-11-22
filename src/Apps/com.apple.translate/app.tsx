@@ -1,11 +1,8 @@
-import { ComingSoon } from "module/ComingSoon"
-import Icon from "./icon.svg"
-
+import { ComingSoon } from "module/ComingSoon";
+import Icon from "./icon.svg";
 
 const Translate = () => {
-  return (
-    <ComingSoon name="Translate" icon={Icon} />
-  )
-}
+  return <ComingSoon name="Translate" icon={Icon} />;
+};
 
-export default Translate
+export default Translate;

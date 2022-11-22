@@ -1,12 +1,10 @@
-import React from "react"
-import type { DefaultTheme } from 'styled-components';
-import { ThemeProvider } from "styled-components"
-import createStore from "zustand"
-import { persist } from 'zustand/middleware'
+import React from "react";
+import type { DefaultTheme } from "styled-components";
+import { ThemeProvider } from "styled-components";
+import createStore from "zustand";
+import { persist } from "zustand/middleware";
 
-const baseTheme: Partial<DefaultTheme> = {
-
-}
+const baseTheme: Partial<DefaultTheme> = {};
 
 const lightTheme: DefaultTheme = {
   ...baseTheme,
@@ -28,16 +26,16 @@ const lightTheme: DefaultTheme = {
       purple: `rgb(175, 82, 222)`,
       pink: `rgb(255, 45, 85)`,
       brown: `rgb(162, 132, 94)`,
-    
+
       gray: `rgb(142, 142, 147)`,
       gray2: `rgb(174, 174, 178)`,
       gray3: `rgb(199, 199, 204)`,
       gray4: `rgb(209, 209, 214)`,
       gray5: `rgb(229, 229, 234)`,
       gray6: `rgb(242, 242, 247)`,
-    }
-  }
-}
+    },
+  },
+};
 
 const darkTheme: DefaultTheme = {
   ...baseTheme,
@@ -59,55 +57,50 @@ const darkTheme: DefaultTheme = {
       purple: `rgb(191, 90, 242)`,
       pink: `rgb(255, 55, 95)`,
       brown: `rgb(172, 142, 104)`,
-    
+
       gray: `rgb(142, 142, 147)`,
       gray2: `rgb(99, 99, 102)`,
       gray3: `rgb(72, 72, 74)`,
       gray4: `rgb(58, 58, 60)`,
       gray5: `rgb(44, 44, 46)`,
       gray6: `rgb(28, 28, 30)`,
-    }
-  }
-}
+    },
+  },
+};
 
 const themes = {
   light: lightTheme,
-  dark: darkTheme
-}
+  dark: darkTheme,
+};
 
 type ThemeProps = {
-  children: JSX.Element | JSX.Element[]
-}
+  children: JSX.Element | JSX.Element[];
+};
 
 const Theme = ({ children }: ThemeProps) => {
+  const theme = useTheme((state) => state.theme);
 
-  const theme = useTheme(state => state.theme)
+  return <ThemeProvider theme={themes[theme]}>{children}</ThemeProvider>;
+};
 
-  return (
-    <ThemeProvider theme={themes[theme]}>
-      {children}
-    </ThemeProvider>
-  )
-}
+export default Theme;
 
-export default Theme
-
-type ThemeOptions = keyof typeof themes
+type ThemeOptions = keyof typeof themes;
 
 type ThemeStore = {
   theme: ThemeOptions;
   setTheme: (theme: ThemeOptions) => void;
-}
+};
 
 export const useTheme = createStore<ThemeStore>()(
   persist(
     (set, get) => ({
       theme: "light",
-      setTheme: (theme) => set({ theme })
+      setTheme: (theme) => set({ theme }),
     }),
     {
       name: "theme",
-      version: 1
-    }
-  )
-)
+      version: 1,
+    },
+  ),
+);

@@ -1,35 +1,35 @@
-import * as AppStore from "../com.apple.app-store"
-import * as Contacts from "../com.apple.contacts"
-import * as AppleMusic from "../com.apple.apple-music"
-import * as AppleStore from "../com.apple.apple-store"
-import * as AppleTv from "../com.apple.apple-tv"
-import * as Books from "../com.apple.books"
-import * as Calculator from "../com.apple.calculator"
-import * as Calendar from "../com.apple.calendar"
-import * as Camera from "../com.apple.camera"
-import * as Clips from "../com.apple.clips"
-import * as Clock from "../com.apple.clock"
-import * as Facetime from "../com.apple.facetime"
-import * as Files from "../com.apple.files"
-import * as FindMy from "../com.apple.find-my"
-import * as Health from "../com.apple.health"
-import * as Home from "../com.apple.home"
-import * as IMessage from "../com.apple.i-message"
-import * as Mail from "../com.apple.mail"
-import * as Measure from "../com.apple.measure"
-import * as Shortcuts from "../com.apple.shortcuts"
-import * as News from "../com.apple.news"
-import * as Notes from "../com.apple.notes"
-import * as Photos from "../com.apple.photos"
-import * as Podcasts from "../com.apple.podcasts"
-import * as Reminders from "../com.apple.reminders"
-import * as Safari from "../com.apple.safari"
-import * as Settings from "../com.apple.settings"
-import * as Stocks from "../com.apple.stocks"
-import * as Translate from "../com.apple.translate"
-import * as VoiceMemos from "../com.apple.voice-memos"
-import * as Wallet from "../com.apple.wallet"
-import * as Weather from "../com.apple.weather"
+import * as AppStore from "../com.apple.app-store";
+import * as Contacts from "../com.apple.contacts";
+import * as AppleMusic from "../com.apple.apple-music";
+import * as AppleStore from "../com.apple.apple-store";
+import * as AppleTv from "../com.apple.apple-tv";
+import * as Books from "../com.apple.books";
+import * as Calculator from "../com.apple.calculator";
+import * as Calendar from "../com.apple.calendar";
+import * as Camera from "../com.apple.camera";
+import * as Clips from "../com.apple.clips";
+import * as Clock from "../com.apple.clock";
+import * as Facetime from "../com.apple.facetime";
+import * as Files from "../com.apple.files";
+import * as FindMy from "../com.apple.find-my";
+import * as Health from "../com.apple.health";
+import * as Home from "../com.apple.home";
+import * as IMessage from "../com.apple.i-message";
+import * as Mail from "../com.apple.mail";
+import * as Measure from "../com.apple.measure";
+import * as Shortcuts from "../com.apple.shortcuts";
+import * as News from "../com.apple.news";
+import * as Notes from "../com.apple.notes";
+import * as Photos from "../com.apple.photos";
+import * as Podcasts from "../com.apple.podcasts";
+import * as Reminders from "../com.apple.reminders";
+import * as Safari from "../com.apple.safari";
+import * as Settings from "../com.apple.settings";
+import * as Stocks from "../com.apple.stocks";
+import * as Translate from "../com.apple.translate";
+import * as VoiceMemos from "../com.apple.voice-memos";
+import * as Wallet from "../com.apple.wallet";
+import * as Weather from "../com.apple.weather";
 
 export default {
   "com.apple.stocks": Stocks,
@@ -64,4 +64,4 @@ export default {
   "com.apple.translate": Translate,
   "com.apple.voice-memos": VoiceMemos,
   "com.apple.weather": Weather,
-} as const
+} as const;

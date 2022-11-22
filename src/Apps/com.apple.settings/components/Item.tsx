@@ -2,34 +2,33 @@ import { IoIosArrowForward } from "@react-icons/all-files/io/IoIosArrowForward";
 import styled from "styled-components";
 import { useRouter } from "module/Router";
 
-type ItemProps = LinkItemProps | ChildItemProps
+type ItemProps = LinkItemProps | ChildItemProps;
 
 export const Item = (props: ItemProps) => {
-
   if ("link" in props) {
-    return <LinkItem {...props} />
+    return <LinkItem {...props} />;
   }
 
   if ("children" in props) {
-    return <ChildItem {...props} />
+    return <ChildItem {...props} />;
   }
 
-  return <></>
-}
+  return <></>;
+};
 
 type LinkItemProps = {
   title: string;
   icon: () => JSX.Element;
   link: string;
   status?: string;
-}
+};
 
 const LinkItem = ({ icon: Icon, ...props }: LinkItemProps) => {
-  const { navigate } = useRouter()
+  const { navigate } = useRouter();
 
   const handleClick = () => {
-    navigate(props.link)
-  }
+    navigate(props.link);
+  };
 
   return (
     <Container onClick={handleClick}>
@@ -42,14 +41,14 @@ const LinkItem = ({ icon: Icon, ...props }: LinkItemProps) => {
         </ToScreen>
       </Details>
     </Container>
-  )
-}
+  );
+};
 
 type ChildItemProps = {
   title: string;
   icon: () => JSX.Element;
   children: JSX.Element;
-}
+};
 
 const ChildItem = ({ icon: Icon, ...props }: ChildItemProps) => {
   return (
@@ -57,13 +56,11 @@ const ChildItem = ({ icon: Icon, ...props }: ChildItemProps) => {
       <Icon />
       <Details>
         <ItemTitle>{props.title}</ItemTitle>
-        <ToScreen>
-          {props.children}
-        </ToScreen>
+        <ToScreen>{props.children}</ToScreen>
       </Details>
     </Container>
-  )
-} 
+  );
+};
 
 const Container = styled.button`
   border: none;

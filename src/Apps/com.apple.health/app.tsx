@@ -1,11 +1,8 @@
-import { ComingSoon } from "module/ComingSoon"
-import Icon from "./icon.svg"
-
+import { ComingSoon } from "module/ComingSoon";
+import Icon from "./icon.svg";
 
 const Health = () => {
-  return (
-    <ComingSoon name="Health" icon={Icon} />
-  )
-}
+  return <ComingSoon name="Health" icon={Icon} />;
+};
 
-export default Health
+export default Health;

@@ -1,14 +1,14 @@
-import React from "react"
+import React from "react";
 import styled from "styled-components";
-import format from 'date-fns/format'
+import format from "date-fns/format";
 
-import { BsReception4 } from "@react-icons/all-files/bs/BsReception4"
-import { IoIosWifi } from "@react-icons/all-files/io/IoIosWifi"
-import { BsBatteryFull } from "@react-icons/all-files/bs/BsBatteryFull"
+import { BsReception4 } from "@react-icons/all-files/bs/BsReception4";
+import { IoIosWifi } from "@react-icons/all-files/io/IoIosWifi";
+import { BsBatteryFull } from "@react-icons/all-files/bs/BsBatteryFull";
 
 type StatusBarProps = {
   color: string;
-}
+};
 
 export const Statusbar = ({ color }: StatusBarProps) => {
   return (
@@ -20,11 +20,11 @@ export const Statusbar = ({ color }: StatusBarProps) => {
         {/* if possible by hooking in to the browsers apis it would be sick to animate these */}
         <BsReception4 size={16} />
         <IoIosWifi size={18} />
-        <BsBatteryFull size={20} /> 
+        <BsBatteryFull size={20} />
       </Partitions>
     </Container>
-  )
-}
+  );
+};
 
 const Container = styled.div<{ bgColor: string }>`
 

@@ -2,8 +2,7 @@ import styled from "styled-components";
 
 import IOS from "ios";
 import { Controls } from "./Components/Controls";
-import { Description } from "./Components/Description"
-
+import { Description } from "./Components/Description";
 
 const App = () => {
   return (
@@ -15,8 +14,8 @@ const App = () => {
       </Container>
       <Description />
     </>
-  )
-}
+  );
+};
 
 export default App;
 

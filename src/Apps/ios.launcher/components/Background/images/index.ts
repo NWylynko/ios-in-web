@@ -1,6 +1,5 @@
-
-import dark from "./dark.png"
-import ios15 from "./ios15.webp"
+import dark from "./dark.png";
+import ios15 from "./ios15.webp";
 
 interface Backgrounds {
   [name: string]: string;
@@ -8,5 +7,5 @@ interface Backgrounds {
 
 export const backgrounds: Backgrounds = {
   dark,
-  ios15
-}
+  ios15,
+};

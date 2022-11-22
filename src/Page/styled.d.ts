@@ -1,5 +1,5 @@
 // styled.d.ts
-import 'styled-components';
+import "styled-components";
 
 interface SystemColors {
   red: string;
@@ -23,14 +23,14 @@ interface SystemColors {
   gray6: string;
 }
 
-declare module 'styled-components' {
+declare module "styled-components" {
   export interface DefaultTheme {
     color: {
       white: string;
       black: string;
-    }
+    };
     ios: {
-      color: SystemColors
-    }
+      color: SystemColors;
+    };
   }
 }

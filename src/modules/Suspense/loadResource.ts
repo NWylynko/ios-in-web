@@ -10,9 +10,7 @@ type status = "pending" | "success" | "error";
 // this function let us get a new function using the asyncFn we pass
 // this function also receives a payload and return us a resource with
 // that payload assigned as type
-export function createResource<Payload>(
-  asyncFn: () => Promise<Payload>
-): Resource<Payload> {
+export function createResource<Payload>(asyncFn: () => Promise<Payload>): Resource<Payload> {
   // we start defining our resource is on a pending status
   let status: status = "pending";
   // and we create a variable to store the result
@@ -31,7 +29,7 @@ export function createResource<Payload>(
       // and we save the returned error as result
       status = "error";
       result = e;
-    }
+    },
   );
   // lately we return an error object with the read method
   return {

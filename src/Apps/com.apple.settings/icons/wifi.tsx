@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { IoIosWifi } from "@react-icons/all-files/io/IoIosWifi"
+import { IoIosWifi } from "@react-icons/all-files/io/IoIosWifi";
 import { icon } from "./_base";
 
 const WifiIcon = styled(IoIosWifi)`
@@ -9,4 +9,4 @@ const WifiIcon = styled(IoIosWifi)`
   padding: 4px;
 `;
 
-export const Wifi = () => <WifiIcon size={28} />
+export const Wifi = () => <WifiIcon size={28} />;

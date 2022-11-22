@@ -1,13 +1,15 @@
 import styled from "styled-components";
 
-
 export const Description = () => {
   return (
     <Container>
-      <Text>Created for fun by <Link href="https://nick.wylynko.com">Nick Wylynko</Link>, please star it on <Link href="https://github.com/nwylynko/ios-in-web">Github</Link>.</Text>
+      <Text>
+        Created for fun by <Link href="https://nick.wylynko.com">Nick Wylynko</Link>, please star it on{" "}
+        <Link href="https://github.com/nwylynko/ios-in-web">Github</Link>.
+      </Text>
     </Container>
-  )
-}
+  );
+};
 
 const Container = styled.div`
   display: flex;

@@ -9,7 +9,8 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "pull-env": "vercel env pull .env.development.local",
-    "format": "rome format ."
+    "format": "rome format .",
+    "format:fix": "rome format . --write"
   },
   "dependencies": {
     "@loadable/component": "^5.15.2",

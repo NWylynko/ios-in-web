@@ -5,18 +5,21 @@ import { loadImage } from "module/Suspense/loadImage";
 type ComingSoonProps = {
   name: string;
   icon: string;
-}
+};
 
 export const ComingSoon = ({ name, icon }: ComingSoonProps) => {
   loadImage(icon).read();
   return (
     <Container>
       <Image src={icon} />
-      <Text>Sorry but <strong>{name}</strong> has not been built yet. Don't worry we are working hard and it should be done soon.</Text>
+      <Text>
+        Sorry but <strong>{name}</strong> has not been built yet. Don't worry we are working hard and it should be done
+        soon.
+      </Text>
       <Button onClick={() => openApp("ios.launcher")}>Go Home</Button>
     </Container>
-  )
-}
+  );
+};
 
 const Container = styled.div`
   display: flex;

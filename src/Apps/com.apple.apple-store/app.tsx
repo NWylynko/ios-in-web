@@ -1,11 +1,8 @@
-import { ComingSoon } from "module/ComingSoon"
-import Icon from "./icon.svg"
-
+import { ComingSoon } from "module/ComingSoon";
+import Icon from "./icon.svg";
 
 const AppleStore = () => {
-  return (
-    <ComingSoon name="Apple Store" icon={Icon} />
-  )
-}
+  return <ComingSoon name="Apple Store" icon={Icon} />;
+};
 
-export default AppleStore
+export default AppleStore;

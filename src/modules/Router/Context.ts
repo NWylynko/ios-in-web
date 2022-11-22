@@ -7,11 +7,11 @@ export type RouterStore = {
   goForward: () => void;
   canGoBack: boolean;
   canGoForward: boolean;
-}
+};
 
 const InvalidFunction = () => {
-  throw new Error(`try to call a function from useRouter outside of the <Router> component`)
-}
+  throw new Error(`try to call a function from useRouter outside of the <Router> component`);
+};
 
 export const RouterContext = createContext<RouterStore>({
   path: "/",
@@ -19,5 +19,5 @@ export const RouterContext = createContext<RouterStore>({
   goBack: InvalidFunction,
   goForward: InvalidFunction,
   canGoBack: false,
-  canGoForward: false
-})
+  canGoForward: false,
+});

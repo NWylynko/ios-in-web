@@ -1,2 +1,2 @@
 export { Loading } from "./Loading";
-export { LoadingPage } from "./LoadingPage"
+export { LoadingPage } from "./LoadingPage";

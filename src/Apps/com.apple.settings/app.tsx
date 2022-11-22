@@ -1,13 +1,13 @@
-import styled from "styled-components"
-import { Router, Route } from "module/Router"
-import { Statusbar } from "module/StatusBar"
+import styled from "styled-components";
+import { Router, Route } from "module/Router";
+import { Statusbar } from "module/StatusBar";
 
-import { HomeScreen } from "./screens/home"
+import { HomeScreen } from "./screens/home";
 
-import { WifiScreen } from "./screens/CoreControls/Wifi"
-import { BluetoothScreen } from "./screens/CoreControls/bluetooth"
-import { MobileScreen } from "./screens/CoreControls/mobile"
-import { HotspotScreen } from "./screens/CoreControls/hotspot"
+import { WifiScreen } from "./screens/CoreControls/Wifi";
+import { BluetoothScreen } from "./screens/CoreControls/bluetooth";
+import { MobileScreen } from "./screens/CoreControls/mobile";
+import { HotspotScreen } from "./screens/CoreControls/hotspot";
 
 const Settings = () => {
   return (
@@ -23,10 +23,10 @@ const Settings = () => {
         </Router>
       </Container>
     </>
-  )
-}
+  );
+};
 
-export default Settings
+export default Settings;
 
 const Container = styled.div`
   padding: 12px;
