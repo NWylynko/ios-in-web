@@ -1,11 +1,12 @@
 import styled from "styled-components";
 
 export const IPhoneEdge = styled.div`
-  border: 16px solid var(--foreground);
+  border: 16px solid rgb(8, 8, 8);
   border-radius: 64px;
   overflow: hidden;
   position: relative;
-  background-color: var(--foreground);
+  background-color: ${({ theme }) => theme.color.white};
+
 
   max-height: var(--full-height);
   max-width: var(--full-width);
@@ -15,7 +16,7 @@ export const IPhoneEdge = styled.div`
     content: "";
     width: 50%;
     height: 28px;
-    background-color: var(--foreground);
+    background-color: rgb(8, 8, 8);
     position: absolute;
     top: 0;
     left: 25%;

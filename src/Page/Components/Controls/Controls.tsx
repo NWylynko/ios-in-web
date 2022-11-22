@@ -7,7 +7,7 @@ import { openApp } from "ios/SystemEvents";
 export const Controls = () => {
   return (
     <Container>
-      <CgHomeScreen size={48} onClick={() => openApp("ios.launcher")} />
+      <CgHomeScreen size={48} onClick={() => openApp("ios.launcher")} color="var(--colorBlack)" />
     </Container>
   );
 };
@@ -21,7 +21,7 @@ const Container = styled.div`
 
     margin: 16px;
     padding: 4px;
-    border: 3px solid var(--foreground);
+    border: 3px solid var(--colorBlack);
     border-radius: 8px;
     cursor: pointer;
 

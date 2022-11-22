@@ -43,6 +43,7 @@ const Button = styled.button`
   border: none;
   border-radius: 18px;
   color: ${({ theme }) => theme.ios.color.blue};
+  background-color: ${({ theme }) => theme.ios.color.gray5};
   font-weight: bold;
   font-size: 16px;
 `;

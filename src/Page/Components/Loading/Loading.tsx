@@ -8,7 +8,7 @@ export const Loading = styled.div`
   margin: 16px;
 
   border: 4px solid transparent;
-  border-top: 4px solid var(--foreground);
+  border-top: 4px solid var(--alwaysBlack);
   border-radius: 50%;
 
   animation: spin 1s linear infinite;

@@ -18,9 +18,9 @@ export const Statusbar = ({ color }: StatusBarProps) => {
       </Partitions>
       <Partitions>
         {/* if possible by hooking in to the browsers apis it would be sick to animate these */}
-        <BsReception4 size={16} />
-        <IoIosWifi size={18} />
-        <BsBatteryFull size={20} />
+        <BsReception4 size={16} color="var(--colorWhite)" />
+        <IoIosWifi size={18} color="var(--colorWhite)" />
+        <BsBatteryFull size={20} color="var(--colorWhite)" />
       </Partitions>
     </Container>
   );
@@ -57,4 +57,5 @@ const Partitions = styled.div`
 
 const Time = styled.span`
   font-weight: 600;
+  color: ${({ theme }) => theme.color.white};
 `;

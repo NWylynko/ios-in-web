@@ -92,6 +92,8 @@ const Details = styled.div`
   padding-right: 18px;
   border-bottom: 1px solid ${({ theme }) => theme.ios.color.gray4};
   height: 48px;
+
+  color: ${({ theme }) => theme.color.black};
 `;
 
 const ItemTitle = styled.h3`
@@ -105,6 +107,7 @@ const ToScreen = styled.div`
   justify-content: space-between;
   align-items: center;
   gap: 8px;
+  color: ${({ theme }) => theme.color.black};
 `;
 
 const Status = styled.span`

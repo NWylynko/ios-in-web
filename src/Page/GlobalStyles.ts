@@ -24,6 +24,9 @@ const GlobalStyles = createGlobalStyle`
     --iosColorGray4: ${(props) => props.theme.ios.color.gray4};
     --iosColorGray5: ${(props) => props.theme.ios.color.gray5};
     --iosColorGray6: ${(props) => props.theme.ios.color.gray6};
+
+    background-color: var(--colorWhite);
+    color: var(--colorBlack);
   }
 `;
 

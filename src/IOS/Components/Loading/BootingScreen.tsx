@@ -20,16 +20,16 @@ const BootingScreenContainer = styled.div`
   align-content: center;
   justify-content: center;
   align-items: center;
-  background-color: var(--foreground);
+  background-color: var(--alwaysBlack);
 
   svg {
-    color: var(--background);
+    color: var(--alwaysWhite);
   }
 `;
 
 const LoadingBar = styled.div`
   height: 4px;
   width: 50%;
-  background-color: var(--background);
+  background-color: var(--alwaysWhite);
   border-radius: 2px;
 `;

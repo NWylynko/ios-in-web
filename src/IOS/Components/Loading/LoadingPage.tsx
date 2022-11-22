@@ -23,5 +23,5 @@ const LoadingPageContainer = styled.div`
   align-content: center;
   justify-content: center;
   align-items: center;
-  background-color: var(--background);
+  background-color: var(--alwaysWhite);
 `;

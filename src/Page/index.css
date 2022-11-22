@@ -4,10 +4,8 @@ body {
   --full-height: 812px;
   --full-width: 375px;
 
-  --foreground: rgb(8, 8, 8);
-  --background: rgb(250, 250, 250);
-
-  background-color: var(--background);
+  --alwaysBlack: rgb(8, 8, 8);
+  --alwaysWhite: rgb(250, 250, 250);
 }
 
 * {

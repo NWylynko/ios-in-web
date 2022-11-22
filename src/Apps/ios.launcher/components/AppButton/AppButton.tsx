@@ -12,6 +12,6 @@ export const AppButton = styled.button`
     margin-top: 8px;
     margin-bottom: 16px;
     font-size: 14px;
-    color: var(--background);
+    color: var(--alwaysWhite);
   }
 `;
