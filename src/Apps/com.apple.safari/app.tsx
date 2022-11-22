@@ -1,5 +1,5 @@
 import { Route, Router } from "module/Router";
-import { Statusbar } from "ios/Experiences/StatusBars";
+import { Statusbar } from "ios/StatusBars";
 import styled from "styled-components";
 
 import { HomeScreen } from "./screens/Home";

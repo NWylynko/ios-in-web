@@ -1,4 +1,4 @@
-import { Statusbar } from "ios/Experiences/StatusBars";
+import { Statusbar } from "ios/StatusBars";
 import styled from "styled-components";
 import { ListOfApps } from "./components/ListOfApps";
 

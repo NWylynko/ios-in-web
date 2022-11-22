@@ -17,7 +17,20 @@
     "jsx": "react-jsx",
     "paths": {
       "ios": ["./src/IOS"],
-      "ios/*": ["./src/IOS/*", "./src/IOS-components/*"],
+      "ios/*": [
+        "./src/IOS/*", 
+        "./src/IOS-components/*",
+        "./src/IOS-components/Actions/*",
+        "./src/IOS-components/Content/*",
+        "./src/IOS-components/Experiences/*",
+        "./src/IOS-components/Input/*",
+        "./src/IOS-components/Layouts/*",
+        "./src/IOS-components/Menus/*",
+        "./src/IOS-components/Navigation/*",
+        "./src/IOS-components/Presentation/*",
+        "./src/IOS-components/Search/*",
+        "./src/IOS-components/Status/*",
+      ],
       "module": ["./src/modules"],
       "module/*": ["./src/modules/*"],
       "@/*": ["./src/*"]

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 import { useAppManager, findApp } from "ios/AppManager";
-import { Statusbar } from "ios/Experiences/StatusBars";
+import { Statusbar } from "ios/StatusBars";
 
 import { AppButton } from "./components/AppButton";
 import { AppIcon } from "./components/AppIcon";
