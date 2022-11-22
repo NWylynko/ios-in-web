@@ -10,18 +10,12 @@ const Safari = () => {
   return (
     <>
       <Statusbar />
-      <Container>
-        <Router>
-          <Route path="/" screen={HomeScreen} />
-          <Route path="/tabs" screen={TabsScreen} />
-        </Router>
-      </Container>
+      <Router>
+        <Route path="/" screen={HomeScreen} />
+        <Route path="/tabs" screen={TabsScreen} />
+      </Router>
     </>
   );
 };
 
 export default Safari;
-
-const Container = styled.div`
-  /* height: var(--full-height); */
-`;

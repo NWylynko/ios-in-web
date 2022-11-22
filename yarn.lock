@@ -2087,10 +2087,10 @@ react-is@^16.12.0, react-is@^16.7.0:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
-react-raw-hooks@0.0.4:
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/react-raw-hooks/-/react-raw-hooks-0.0.4.tgz#66a28d91b8e8028b0833c9ae65a67850c7a2f8e6"
-  integrity sha512-xTsfwHJbGfKKu5PVMfj8vOLAdh+z445e5RDPnjNkkf6So6leLEN3NtxKq48XQwmeLtk4wOr9U7A5640dii2bhg==
+react-raw-hooks@0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/react-raw-hooks/-/react-raw-hooks-0.1.1.tgz#0befb2fe698191728c4a3573625134974bc2330b"
+  integrity sha512-r2/A86psJ8LhYoU6+DRvD6cRhRtOFsLO+uS/nLts9s5jsVbWnNb9zrxQ92pkJyBGDOyP6g9dRS/4Ox9Az1BGjQ==
 
 react-refresh@^0.14.0:
   version "0.14.0"

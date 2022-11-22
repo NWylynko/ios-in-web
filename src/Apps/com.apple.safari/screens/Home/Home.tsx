@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Toolbar } from "../../Component/Toolbar";
 
 import { FavouritesSection } from "./Sections/FavouritesSection";
 import { FrequentlyVisitedSection } from "./Sections/FrequentlyVisitedSection";
@@ -11,15 +12,18 @@ import { ICloudTabsSection } from "./Sections/ICloudTabsSection";
 
 export const HomeScreen = () => {
   return (
-    <Container>
-      <FavouritesSection />
-      <FrequentlyVisitedSection />
-      <SharedWithYouSection />
-      <PrivacyReportSection />
-      <SiriSuggestionsSection />
-      <ReadingListSection />
-      <ICloudTabsSection />
-    </Container>
+    <>
+      <Container>
+        <FavouritesSection />
+        <FrequentlyVisitedSection />
+        <SharedWithYouSection />
+        <PrivacyReportSection />
+        <SiriSuggestionsSection />
+        <ReadingListSection />
+        <ICloudTabsSection />
+      </Container>
+      <Toolbar />
+    </>
   );
 };
 
