@@ -10,4 +10,5 @@ body {
 
 * {
   font-family: "SFProDisplay-Regular", 'Roboto', sans-serif;
+  letter-spacing: 0.075em;
 }
