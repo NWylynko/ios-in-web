@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 import { useAppManager, findApp } from "ios/AppManager";
+import { Statusbar } from "ios/Experiences/StatusBars";
 
 import { AppButton } from "./components/AppButton";
 import { AppIcon } from "./components/AppIcon";
@@ -10,7 +11,6 @@ import { Background } from "./components/Background";
 
 import { useAppLayout } from "./layout";
 import { AppId } from "..";
-import { Statusbar } from "module/StatusBar";
 
 const getApps = (appsWanted: AppId[]) => {
   return appsWanted.map(findApp);

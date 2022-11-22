@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { loadImage } from "module/Suspense/loadImage";
 import { useAppManager } from "ios/AppManager";
-import { Statusbar } from "module/StatusBar";
+import { Statusbar } from "ios/Experiences/StatusBars";
 
 type ComingSoonProps = {
   name: string;
