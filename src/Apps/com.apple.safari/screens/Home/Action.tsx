@@ -11,7 +11,7 @@ type ActionProps = {
 export const Action = ({ title = "Show All", expanded, onClick }: ActionProps) => {
   return (
     <ActionButton size="small" variant="plain" onClick={onClick}>
-      {title} <Arrow size={16} active={expanded} />
+      {title} <Arrow size={16} rotate={expanded ? "90deg" : "0deg"} />
     </ActionButton>
   );
 };
@@ -21,7 +21,7 @@ const ActionButton = styled(Button)`
   align-items: center;
 `;
 
-const Arrow = styled(RiArrowRightSLine)<{ active: boolean }>`
+const Arrow = styled(RiArrowRightSLine)<{ rotate: string }>`
   transition: transform 125ms ease-in-out;
-  transform: rotate(${({ active }) => (active ? "90deg" : "0deg")});
+  transform: rotate(${({ rotate }) => rotate});
 `;
