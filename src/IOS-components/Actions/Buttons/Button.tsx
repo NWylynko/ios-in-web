@@ -5,6 +5,7 @@ const base = css`
   background-color: transparent;
   border: none;
   border-radius: 16px;
+  cursor: pointer;
 `;
 
 const small = css`
