@@ -17,7 +17,7 @@
     "jsx": "react-jsx",
     "paths": {
       "ios": ["./src/IOS"],
-      "ios/*": ["./src/IOS/*"],
+      "ios/*": ["./src/IOS/*", "./src/IOS-components/*"],
       "module": ["./src/modules"],
       "module/*": ["./src/modules/*"],
       "@/*": ["./src/*"]
