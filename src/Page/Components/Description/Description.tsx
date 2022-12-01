@@ -7,6 +7,7 @@ export const Description = () => {
         Created for fun by <Link href="https://nick.wylynko.com">Nick Wylynko</Link>, please star it on{" "}
         <Link href="https://github.com/nwylynko/ios-in-web">Github</Link>.
       </Text>
+      <Text>This is made to run in Chrome, if you have problems with it on other browsers please use Chrome. (Or a Chromium based browser)</Text>
     </Container>
   );
 };
@@ -14,6 +15,8 @@ export const Description = () => {
 const Container = styled.div`
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const Text = styled.span`
