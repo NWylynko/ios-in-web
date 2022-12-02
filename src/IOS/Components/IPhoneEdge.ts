@@ -15,7 +15,7 @@ export const IPhoneEdge = styled.div`
   &:after {
     content: "";
     width: 50%;
-    height: 28px;
+    height: 30px;
     background-color: rgb(8, 8, 8);
     position: absolute;
     top: 0;

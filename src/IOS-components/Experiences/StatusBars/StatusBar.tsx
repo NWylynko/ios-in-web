@@ -32,9 +32,9 @@ const Container = styled.div<{ bgColor: string }>`
 
   background-color: ${(props) => props.bgColor};
 
-  min-height: 35px;
-  height: 35px;
-  max-height: 35px;
+  min-height: 40px;
+  height: 40px;
+  max-height: 40px;
 
   width: 100%;
 
