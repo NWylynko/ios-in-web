@@ -22,7 +22,7 @@ export const IPhoneEdge = styled.div`
     left: 25%;
     right: 25%;
 
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 22px;
+    border-bottom-right-radius: 22px;
   }
 `;
