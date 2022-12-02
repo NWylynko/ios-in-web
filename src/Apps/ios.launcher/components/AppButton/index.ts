@@ -1,1 +1,1 @@
-export { AppButton } from "./AppButton";
+export { AppButton, AppLabel } from "./AppButton";

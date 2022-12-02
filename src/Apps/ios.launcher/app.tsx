@@ -3,11 +3,12 @@ import styled from "styled-components";
 import { useAppManager, findApp } from "ios/AppManager";
 import { Statusbar } from "ios/StatusBars";
 
-import { AppButton } from "./components/AppButton";
+import { AppButton, AppLabel } from "./components/AppButton";
 import { AppIcon } from "./components/AppIcon";
 import { Dock } from "./components/Dock";
 import { GridLayout } from "./components/GridLayout";
 import { Background } from "./components/Background";
+import { Pages } from "./components/Pages";
 
 import { useAppLayout } from "./layout";
 import { AppId } from "..";
@@ -68,14 +69,3 @@ const Container = styled.div`
   justify-content: space-between;
 `;
 
-const Pages = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  overflow: scroll;
-  min-width: calc(var(--full-width) + 16px);
-`;
-
-const AppLabel = styled.span`
-  text-shadow: 2px 2px 12px black;
-`;

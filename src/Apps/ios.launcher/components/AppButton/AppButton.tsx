@@ -7,11 +7,11 @@ export const AppButton = styled.button`
 
   background-color: transparent;
   border: none;
+`;
 
-  span {
-    margin-top: 8px;
-    margin-bottom: 16px;
-    font-size: 14px;
-    color: var(--alwaysWhite);
-  }
+export const AppLabel = styled.span`
+  text-shadow: 2px 2px 12px black;
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--alwaysWhite);
 `;

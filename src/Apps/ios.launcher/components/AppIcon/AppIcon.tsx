@@ -23,9 +23,9 @@ export const AppIcon = ({ image, loading }: AppIconProps) => {
 };
 
 const AppIconContainer = styled.div`
-  width: 64px;
-  min-height: 64px;
-  height: 64px;
+  width: 60px;
+  min-height: 60px;
+  height: 60px;
   border-radius: 14px;
   position: relative;
   overflow: hidden;
@@ -40,8 +40,8 @@ const LoadingContainer = styled.div`
   background-color: #00000058;
   position: absolute;
   inset: 0;
-  width: 64px;
-  height: 64px;
+  width: 60px;
+  height: 60px;
 
   display: flex;
   align-content: center;
