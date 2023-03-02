@@ -8,12 +8,12 @@ Inspired by [macos.vercel.app](https://macos.vercel.app), this is an attempt to 
 
 Install dependencies
 ```bash
-yarn install
+pnpm install
 ```
 
 Run the development server
 ```bash
-yarn develop
+pnpm develop
 ```
 
 Open up http://localhost:3000
