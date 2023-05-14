@@ -1,6 +1,6 @@
 # 📱 IOS in 🌐 Web
 
-🔗 Link: [https://web-in-ios.vercel.app](https://web-in-ios.vercel.app)
+🔗 Link: [https://ios-in-web.vercel.app](https://ios-in-web.vercel.app)
 
 Inspired by [macos.vercel.app](https://macos.vercel.app), this is an attempt to replicate Apple IOS for the iPhone. Aiming to function as close to a real iPhone as possible, including replicating the online services with serverless functions (this hasn't been started yet). This project uses React and is built by Vite, then deployed to Vercel. This is still very much in development, it will take a lot of work to replicate ios.
 
